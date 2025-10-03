@@ -5,3 +5,5 @@ clock = %c
 bigclock = true
 load = true
 wayland_specifier = true
+
+darkman set dark
