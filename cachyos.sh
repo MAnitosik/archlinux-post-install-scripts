@@ -28,6 +28,7 @@ sudo systemctl enable --now lactd
 paru -S materialgram-bin
 paru -S goofcord-bin
 paru -S amneziavpn-bin
+paru -S github-desktop-plus-bin
 
 sudo pacman -S flatpak
 flatpak install flathub org.onlyoffice.desktopeditors
