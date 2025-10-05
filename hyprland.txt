@@ -1,9 +1,0 @@
-/etc/ly/config.ini
-animate = true
-animation = 1
-clock = %c
-bigclock = true
-load = true
-wayland_specifier = true
-
-darkman set dark
