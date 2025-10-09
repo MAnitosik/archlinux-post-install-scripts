@@ -9,5 +9,6 @@ sudo sbctl create-keys
 sudo sbctl enroll-keys --microsoft
 curl -fsSL https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/refs/heads/master/usr/bin/sbctl-batch-sign | sudo bash
 
-sudo pacman -S onlyoffice-bin obs-studio-browser torbrowser-launcher
+sudo pacman -S onlyoffice-bin obs-studio-browser torbrowser-launcher github-desktop fragments lact ventoy-bin gnome-boxes
 yay -S amneziavpn-bin
+sudo systemctl enable --now lactd
