@@ -1,4 +1,4 @@
-sudo pacman -Rns obsidian 1password-beta 1password-cli spotify lazygit lazydocker typora docker docker-compose github-cli libreoffice-fresh kdenlive obs-studio
+sudo pacman -Rns lazygit lazydocker obsidian libreoffice-fresh obs-studio kdenlive 1password-beta 1password-cli typora spotify docker docker-compose github-cli
 curl https://mirror.cachyos.org/cachyos-repo.tar.xz -o cachyos-repo.tar.xz
 tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 sudo ./cachyos-repo.sh
