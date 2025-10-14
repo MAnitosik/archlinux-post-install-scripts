@@ -22,14 +22,14 @@ sudo pacman -S loupe
 sudo pacman -S resources
 sudo pacman -S gnome-boxes
 sudo pacman -S ventoy-bin
+sudo pacman -S telegram-desktop
+sudo pacman -S github-desktop
+sudo pacman -S onlyoffice-bin
 sudo pacman -S --asdeps wl-clipboard
 sudo systemctl enable --now lactd
 
-paru -S materialgram-bin
 paru -S goofcord-bin
 paru -S amneziavpn-bin
-paru -S github-desktop-plus-bin
 
 sudo pacman -S flatpak
-flatpak install flathub org.onlyoffice.desktopeditors
 flatpak install flathub dev.qwery.AddWater
