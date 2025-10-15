@@ -12,7 +12,6 @@ sudo pacman -S scx-scheds-git
 sudo pacman -S librewolf-bin
 sudo pacman -S torbrowser-launcher
 sudo pacman -S zed
-sudo pacman -S amberol
 sudo pacman -S fragments
 sudo pacman -S obs-studio-browser
 sudo pacman -S showtime
@@ -25,11 +24,10 @@ sudo pacman -S ventoy-bin
 sudo pacman -S telegram-desktop
 sudo pacman -S github-desktop
 sudo pacman -S onlyoffice-bin
+sudo pacman -S flatpak
 sudo pacman -S --asdeps wl-clipboard
 sudo systemctl enable --now lactd
 
 paru -S goofcord-bin
 paru -S amneziavpn-bin
-
-sudo pacman -S flatpak
-flatpak install flathub dev.qwery.AddWater
+paru -S pinta

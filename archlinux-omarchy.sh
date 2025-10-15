@@ -9,6 +9,6 @@ curl -fsSL https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/refs/heads
 sudo pacman -S scx-scheds-git
 sudo systemctl enable --now scx_loader.service
 
-sudo pacman -S onlyoffice-bin obs-studio-browser torbrowser-launcher github-desktop fragments lact ventoy-bin gnome-boxes
+sudo pacman -S zed onlyoffice-bin obs-studio-browser torbrowser-launcher github-desktop fragments lact ventoy-bin gnome-boxes
 yay -S amneziavpn-bin
 sudo systemctl enable --now lactd
