@@ -11,6 +11,6 @@ sudo pacman -S scx-scheds-git
 sudo systemctl enable --now scx_loader.service
 
 sudo pacman -S zed onlyoffice-bin telegram-desktop obs-studio-browser github-desktop
-sudo pacman -S torbrowser-launcher fragments lact ventoy-bin gnome-boxes gnome-disk-utility
+sudo pacman -S torbrowser-launcher fragments lact ventoy-bin gnome-boxes gnome-disk-utility exfatprogs
 yay -S amneziavpn-bin
 sudo systemctl enable --now lactd
