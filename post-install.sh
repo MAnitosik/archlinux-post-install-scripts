@@ -10,7 +10,14 @@ curl -fsSL https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/refs/heads
 sudo pacman -S scx-scheds-git
 sudo systemctl enable --now scx_loader.service
 
+sudo mkdir /etc/scx_loader
+
 sudo pacman -S zed onlyoffice-bin telegram-desktop obs-studio-browser
 sudo pacman -S github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes gnome-disk-utility exfatprogs
 yay -S amneziavpn-bin
 sudo systemctl enable --now lactd
+
+curl https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.conf | sudo tee ~/.config/hypr/bindings.conf
+curl https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/hyprsunset.conf | sudo tee ~/.config/hypr/hyprsunset.conf
+curl https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/input.conf | sudo tee ~/.config/hypr/input.conf
+curl https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/monitors.conf | sudo tee ~/.config/hypr/monitors.conf
