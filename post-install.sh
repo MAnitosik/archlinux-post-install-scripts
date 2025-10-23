@@ -17,7 +17,7 @@ curl https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/
 curl https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts
 
 sudo pacman -S zed onlyoffice-bin telegram-desktop obs-studio-browser
-sudo pacman -S github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes gnome-disk-utility exfatprogs
+sudo pacman -S github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes exfatprogs
 yay -S amneziavpn-bin
 sudo systemctl enable --now lactd
 
