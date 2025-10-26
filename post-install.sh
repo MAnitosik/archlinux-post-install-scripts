@@ -5,6 +5,16 @@ sudo sbctl create-keys
 sudo sbctl enroll-keys --microsoft
 sudo sbctl-batch-sign
 
+sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
+
+sudo mkdir /etc/cmdline.d
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/cmdline.d/apparmor.conf | sudo tee /etc/cmdline.d/apparmor.conf
+sudo pacman -S --noconfirm --needed apparmor apparmor.d-git
+sudo systemctl enable --now apparmor.service
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/apparmor/parser.conf | sudo tee /etc/apparmor/parser.conf
+
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/cmdline.d/cmdline.conf | sudo tee /etc/cmdline.d/cmdline.conf
+
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/environment | sudo tee /etc/environment
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/99-splitlock.conf | sudo tee /etc/sysctl.d/99-splitlock.conf
