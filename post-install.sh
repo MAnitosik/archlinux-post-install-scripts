@@ -1,3 +1,5 @@
+sudo pacman -S --noconfirm --needed linux-zen-headers dkms
+
 sudo pacman -S --noconfirm --needed cachyos-settings
 
 sudo pacman -S --noconfirm --needed sbctl
@@ -9,15 +11,17 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/99-splitlock.conf | sudo tee /etc/sysctl.d/99-splitlock.conf
 
+sudo pacman -S --noconfirm --needed adios-dkms
+
 systemctl disable --now ananicy-cpp
-sudo pacman -S --noconfirm --needed scx-scheds-git
+sudo pacman -S --noconfirm --needed scx-scheds
 sudo mkdir /etc/scx_loader
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/scx_loader/config.toml | sudo tee /etc/scx_loader/config.toml
 sudo systemctl enable --now scx_loader.service
 
 sudo pacman -S --noconfirm --needed zed onlyoffice-bin telegram-desktop obs-studio-browser
 sudo pacman -S --noconfirm --needed github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes exfatprogs
-yay -S --noconfirm --needed amneziavpn-bin oniux
+yay -S --noconfirm --needed amneziavpn-bin
 sudo systemctl enable --now lactd
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts
 
