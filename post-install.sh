@@ -1,4 +1,5 @@
 sudo pacman -S --noconfirm --needed cachyos-settings
+sudo systemctl enable --now pci-latency.service
 
 sudo pacman -S --noconfirm --needed sbctl
 sudo sbctl create-keys
