@@ -20,7 +20,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/99-splitlock.conf | sudo tee /etc/sysctl.d/99-splitlock.conf
 
-systemctl disable --now ananicy-cpp
+sudo systemctl disable --now ananicy-cpp
 sudo pacman -S --noconfirm --needed scx-scheds
 sudo mkdir /etc/scx_loader
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/scx_loader/config.toml | sudo tee /etc/scx_loader/config.toml
