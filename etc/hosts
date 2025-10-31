@@ -2,7 +2,7 @@
 ::1             localhost ip6-localhost ip6-loopback
 
 ### dns.malw.link: hosts file
-# Последнее обновление: 21 октября 2025
+# Последнее обновление: 31 октября 2025
 # Дополнение к zapret:
 157.240.245.174 instagram.com
 157.240.245.174 www.instagram.com
@@ -78,10 +78,10 @@
 185.246.223.127 aet.spotify.com
 185.246.223.127 www.spotify.com
 185.246.223.127 accounts.spotify.com
-45.95.233.23 open.spotify.com
+185.246.223.127 open.spotify.com
 
 # GitHub Copilot:
-140.82.121.6 api.github.com # MAnitosik tmp fix
+185.246.223.127 api.github.com
 185.246.223.127 api.individual.githubcopilot.com
 185.246.223.127 proxy.individual.githubcopilot.com
 
