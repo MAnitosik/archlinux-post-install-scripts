@@ -12,16 +12,21 @@ Super + Shift + B | Browser
 Super + Shift + F | File manager
 Super + Shift + T | Activity (btop)
 Super + Shift + N | Zed
+Super + Shift + G | Telegram
 Ctrl + Super + S | Share menu (via LocalSend)
 
 Super + C | Copy
 Super + X | Cut (not in terminal)
 Super + V | Paste
 Super + Ctrl + V | Clipboard manager
+
 Print Screen | Screenshot with editing
 Shift + Print Screen | Screenshot straight to clipboard
+
 Ctrl + Super + Space | Next background image for theme
 Super + Backspace | Toggle transparency on a window
+
 Ctrl + Super + I | Toggle idle/sleep prevention
 Ctrl + Super + N | Toggle nightlight display temperature
+
 Super + Ctrl + E | Emoji picker
