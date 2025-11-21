@@ -27,7 +27,7 @@ sudo systemctl enable --now scx_loader.service
 
 sudo modprobe tcp_bbr
 sudo pacman -S --noconfirm --needed zed onlyoffice-bin telegram-desktop obs-studio-browser
-sudo pacman -S --noconfirm --needed github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes exfatprogs
+sudo pacman -S --noconfirm --needed github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin
 sudo systemctl enable --now lactd
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts
