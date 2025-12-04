@@ -1,6 +1,3 @@
-sudo pacman -S --noconfirm --needed cachyos-settings
-sudo systemctl enable --now pci-latency.service
-
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
 sudo mkdir /etc/cmdline.d
@@ -16,9 +13,11 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 sudo systemctl enable --now scx_loader.service
 
 sudo modprobe tcp_bbr
-sudo pacman -S --noconfirm --needed zed onlyoffice-bin telegram-desktop obs-studio-browser
-sudo pacman -S --noconfirm --needed github-desktop torbrowser-launcher fragments lact ventoy-bin gnome-boxes
-yay -S --noconfirm --needed amneziavpn-bin
+sudo pacman -S --noconfirm --needed zed telegram-desktop
+sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes
+yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
+flatpak install -y flathub org.onlyoffice.desktopeditors
+flatpak install -y io.github.pol_riveio.github.pol_rivero.github-desktop-plusro.github-desktop-plus
 sudo systemctl enable --now lactd
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/99-sysctl.conf | sudo tee /etc/sysctl.d/99-sysctl.conf
