@@ -30,7 +30,7 @@ sudo pacman -S --noconfirm --needed zed telegram-desktop
 sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
 flatpak install -y flathub org.onlyoffice.desktopeditors
-flatpak install -y io.github.pol_riveio.github.pol_rivero.github-desktop-plusro.github-desktop-plus
+flatpak install -y flathub io.github.pol_riveio.github.pol_rivero.github-desktop-plusro.github-desktop-plus
 sudo systemctl enable --now lactd
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.conf | tee ~/.config/hypr/bindings.conf
