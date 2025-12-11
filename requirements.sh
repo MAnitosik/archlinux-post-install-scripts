@@ -9,3 +9,5 @@ sudo mkdir /etc/tmpfiles.d
 omarchy-refresh-pacman edge
 sudo pacman -Rns lazygit lazydocker obsidian libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
 sudo pacman -S --needed flatpak
+
+sudo modprobe tcp_bbr
