@@ -7,7 +7,7 @@ sudo mkdir /etc/udev/rules.d
 sudo mkdir /etc/tmpfiles.d
 
 omarchy-channel-set edge
-sudo pacman -Rns lazygit lazydocker obsidian libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
+sudo pacman -Rns lazygit lazydocker btop obsidian libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
 sudo pacman -S --needed flatpak
 
 sudo modprobe tcp_bbr
