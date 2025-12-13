@@ -21,7 +21,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/tmpfiles.d/thp.conf | sudo tee /etc/tmpfiles.d/thp.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/tmpfiles.d/thp-shrinker.conf | sudo tee /etc/tmpfiles.d/thp-shrinker.conf
 
-sudo pacman -S --noconfirm --needed zed telegram-desktop
+sudo pacman -S --noconfirm --needed zed resources telegram-desktop
 sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
 flatpak install -y flathub org.onlyoffice.desktopeditors
