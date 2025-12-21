@@ -1,3 +1,5 @@
+# CachyOS + my own sauce - start
+
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/cmdline.d/cmdline.conf | sudo tee /etc/cmdline.d/cmdline.conf
@@ -22,17 +24,29 @@ cd ./CachyOS-bpftune-git
 makepkg -sirc
 sudo systemctl enable --now bpftune
 
-sudo pacman -S --noconfirm --needed zed resources telegram-desktop
-sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes
+# CachyOS + my own sauce - end
+
+
+# installing some base packages
+# resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
+# zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines
+# Bazaar is for flatpaks (why not)
+# onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
+# Desktop Plus is for github intergration
+sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
+sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
+flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
 flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
 sudo systemctl enable --now lactd
 
+# installing modified omarchy hyprland configs
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.conf | tee ~/.config/hypr/bindings.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/hyprsunset.conf | tee ~/.config/hypr/hyprsunset.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/input.conf | tee ~/.config/hypr/input.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/monitors.conf | tee ~/.config/hypr/monitors.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/autostart.conf | tee ~/.config/hypr/autostart.conf
 
+# regenerating initramfs images (why not, lol)
 sudo mkinitcpio -P
