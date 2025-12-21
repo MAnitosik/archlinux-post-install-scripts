@@ -32,7 +32,7 @@ sudo systemctl enable --now bpftune
 # zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
-# Desktop Plus is for github intergration
+# Desktop Plus is for a github intergration
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
