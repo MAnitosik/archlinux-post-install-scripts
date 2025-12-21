@@ -30,6 +30,7 @@ sudo systemctl enable --now bpftune
 # installing some base packages
 # resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
 # zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines
+# amneziavpn-bin is for VPN, ventoy-bin is for a usb drive
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
 # Desktop Plus is for a github intergration
