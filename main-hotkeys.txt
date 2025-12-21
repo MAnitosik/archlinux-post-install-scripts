@@ -21,6 +21,7 @@ Super + Ctrl + V | Clipboard manager
 
 Print Screen | Screenshot with editing
 Shift + Print Screen | Screenshot straight to clipboard
+Alt + Print Screen | Screenrecord
 
 Ctrl + Super + Space | Next background image for theme
 Super + Backspace | Toggle transparency on a window
