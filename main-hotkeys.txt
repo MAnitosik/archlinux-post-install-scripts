@@ -10,10 +10,9 @@ Shift + Super + 1/2/3/4 | Move window to workspace
 Super + Return | Terminal
 Super + Shift + B | Browser
 Super + Shift + F | File manager
-Super + Shift + T | Activity (btop)
+Super + Shift + T | Activity (resources)
 Super + Shift + N | Zed
-Super + Shift + G | Telegram
-Ctrl + Super + S | Share menu (via LocalSend)
+Super + Shift + G | Messenger (Telegram)
 
 Super + C | Copy
 Super + X | Cut (not in terminal)
