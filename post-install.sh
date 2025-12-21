@@ -17,6 +17,11 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
+git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
+cd ./CachyOS-bpftune-git
+makepkg -sirc
+sudo systemctl enable --now bpftune
+
 sudo pacman -S --noconfirm --needed zed resources telegram-desktop
 sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
