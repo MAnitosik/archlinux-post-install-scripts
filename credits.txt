@@ -1,0 +1,12 @@
+https://github.com/CachyOS/CachyOS-Settingshttps://github.com/CachyOS/CachyOS-Settings
+https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
+https://wiki.cachyos.org/
+https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
+https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
+https://wiki.archlinux.org/title/Sysctl#Improving_performance
+https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
+https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
+https://github.com/basecamp/omarchy/tree/master/config/hypr
+https://learn.omacom.io/2/the-omarchy-manual
+https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
+https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
