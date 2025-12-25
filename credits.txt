@@ -1,4 +1,4 @@
-https://github.com/CachyOS/CachyOS-Settingshttps://github.com/CachyOS/CachyOS-Settings
+https://github.com/CachyOS/CachyOS-Settings
 https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
 https://wiki.cachyos.org/
 https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
