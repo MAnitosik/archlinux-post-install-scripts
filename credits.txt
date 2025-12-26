@@ -15,3 +15,5 @@ https://learn.omacom.io/2/the-omarchy-manual
 https://github.com/basecamp/omarchy/tree/master/default/pacman
 
 https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
+
+https://somegit.dev/ALHP/ALHP.GO

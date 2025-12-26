@@ -1,4 +1,15 @@
-# CachyOS + my own sauce - start
+# CachyOS settings + my own sauce - start
+
+# https://github.com/CachyOS/CachyOS-Settings
+# https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
+# https://wiki.cachyos.org/
+# https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
+# https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
+# https://wiki.archlinux.org/title/Sysctl#Improving_performance
+# https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
+# https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
+# https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
+# https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
 
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
@@ -24,7 +35,7 @@ cd ./CachyOS-bpftune-git
 makepkg -sirc
 sudo systemctl enable --now bpftune
 
-# CachyOS + my own sauce - end
+# CachyOS settings + my own sauce - end
 
 
 # installing some base packages
@@ -34,6 +45,7 @@ sudo systemctl enable --now bpftune
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
 # Desktop Plus is for a github intergration
+# https://learn.omacom.io/2/the-omarchy-manual
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes
 yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
@@ -43,6 +55,8 @@ flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
 sudo systemctl enable --now lactd
 
 # installing modified omarchy hyprland configs
+# https://learn.omacom.io/2/the-omarchy-manual
+# https://github.com/basecamp/omarchy/tree/master/config/hypr
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.conf | tee ~/.config/hypr/bindings.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/hyprsunset.conf | tee ~/.config/hypr/hyprsunset.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/input.conf | tee ~/.config/hypr/input.conf
