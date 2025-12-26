@@ -1,3 +1,2 @@
-archinstall guide/config
-readme (guide on using these scripts)
 1 file script for everything in this repository
+file which explains the architecture of this project
