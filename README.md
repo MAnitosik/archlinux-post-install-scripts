@@ -1,3 +1,7 @@
+# WARNING
+- PRIMALY OPTIMISED FOR AMD SYSTEMS (GPU AND CPU)
+- but it should work on other systems too
+
 # archinstall requirements
 - UKI
 - EFI stub
@@ -6,7 +10,7 @@
 - x86-64-v3 capable CPU
 # sequence of scripts
 - zapret.sh (optional)
-- omarchy.sh/omarchy-2.sh
+- omarchy.sh / omarchy-alt.sh
 - requirements.sh
 - reboot
 - post-install.sh
