@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MAnitosik/archlinux-post-install-scripts)
+
 # WARNING
 - PRIMALY OPTIMISED FOR AMD SYSTEMS (GPU AND CPU)
 - but it should work on other systems too
