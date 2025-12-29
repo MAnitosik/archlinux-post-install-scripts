@@ -2,8 +2,9 @@
 
 # WARNING
 - NOT FOR NEWBIES, USE FRIENDLY LINUX DISTRIBUTIONS (LINUX MINT, FEDORA KDE ETC...)
+- DOES NOT SUPPORT DUAL-BOOT (AND WILL NOT SUPPORT DUAL-BOOT)
 - PRIMALY OPTIMISED FOR AMD-POWERED SYSTEMS (GPU AND CPU)
-- MAKE SURE YOU CONFIGURED EVERYTHING YOU NEED IN ARCHINSTALL (BLUETOOTH, AUDIO ETC...)
+- MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL (BLUETOOTH, AUDIO ETC...)
 
 # hardware requirements
 - x86-64-v3 capable CPU
@@ -11,7 +12,7 @@
 # archinstall requirements (while installation)
 - UKI
 - EFI stub
-- Xorg + graphics drivers (profile)
+- Xorg + graphics drivers (archinstall profile)
 - multilib
 
 # archinstall recommendations (optional, for the best performance)
