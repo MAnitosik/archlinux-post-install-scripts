@@ -19,7 +19,7 @@
 - filesystem: xfs / ext4
 - kernel: linux-zen
 
-# sequence of scripts
+# sequence of scripts (after archinstall, in the installed OS)
 - zapret.sh (optional)
 - omarchy.sh / omarchy-alt.sh
 - requirements.sh
