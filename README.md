@@ -1,15 +1,18 @@
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MAnitosik/archlinux-post-install-scripts)
 
 # WARNING
+- NOT FOR NEWBIES, USE FRIENDLY LINUX DISTRIBUTIONS (LINUX MINT, FEDORA KDE ETC...)
 - PRIMALY OPTIMISED FOR AMD-POWERED SYSTEMS (GPU AND CPU)
 - MAKE SURE YOU CONFIGURED EVERYTHING YOU NEED IN ARCHINSTALL (BLUETOOTH, AUDIO ETC...)
 
-# archinstall requirements
+# hardware requirements
+- x86-64-v3 capable CPU
+
+# archinstall requirements (while installation)
 - UKI
 - EFI stub
 - Xorg + graphics drivers (profile)
 - multilib
-- x86-64-v3 capable CPU
 
 # archinstall recommendations (optional, for the best performance)
 - filesystem: xfs / ext4
