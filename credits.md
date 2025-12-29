@@ -6,12 +6,13 @@
 # dns.malw.link (hosts file)
 - https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 
-# archlinux wiki (performance configs, UKI configuration guide, systemd-resolved dnssec + dot)
+# archlinux wiki (performance configs, UKI configuration guide, systemd-resolved dnssec + dot, regulatory domain)
 - https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 - https://wiki.archlinux.org/title/Sysctl#Improving_performance
 - https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
 - https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 - https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
+- https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 
 # omarchy (manual - useful info, github - pacman + hypr configs)
 - https://github.com/basecamp/omarchy/tree/master/config/hypr
