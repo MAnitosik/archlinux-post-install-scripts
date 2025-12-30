@@ -43,7 +43,7 @@ sudo systemctl enable --now bpftune
 # resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
 # zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd (lvfs)
 # adding some basic support for windows apps with wine-staging, wine-gecko and wine-mono
-# amneziavpn-bin is for VPN, ventoy-bin is for a usb drive
+# amneziavpn-bin is for VPN, v2rayn-bin is for vless, ventoy-bin is for a usb drive
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
 # Desktop Plus is for a github intergration
@@ -52,7 +52,7 @@ sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
 sudo pacman -S --noconfirm --needed wine-staging
 sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono
-yay -S --noconfirm --needed amneziavpn-bin ventoy-bin
+yay -S --noconfirm --needed amneziavpn-bin v2rayn-bin ventoy-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
 flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
