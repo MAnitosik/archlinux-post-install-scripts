@@ -1,12 +1,12 @@
 # cachyos (wiki - useful info, pkgbuilds - bpftune, settings - performance configs)
 - https://github.com/CachyOS/CachyOS-Settings
 - https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
-- https://wiki.cachyos.org/
+- https://wiki.cachyos.org
 
-# dns.malw.link (hosts file)
+# dns.malw.link (hosts file, https://info.dns.malw.link - more info)
 - https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 
-# archlinux wiki (performance configs, UKI configuration guide, systemd-resolved dnssec + dot, regulatory domain)
+# archlinux wiki (performance configs, uki configuration guide, systemd-resolved dnssec + dot, regulatory domain)
 - https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 - https://wiki.archlinux.org/title/Sysctl#Improving_performance
 - https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC

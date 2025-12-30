@@ -1,5 +1,8 @@
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MAnitosik/archlinux-post-install-scripts)
 
+# BYPASSING ISP DPI IN RUSSIA (IN CASE YOU CAN NOT DOWNLOAD PACKAGES ETC...)
+- https://github.com/MAnitosik/Russia-DPI
+
 # WARNING
 - NOT FOR NEWBIES, USE FRIENDLY LINUX DISTRIBUTIONS (LINUX MINT, FEDORA KDE ETC...)
 - DOES NOT SUPPORT DUAL-BOOT (AND WILL NOT SUPPORT DUAL-BOOT)
@@ -29,4 +32,4 @@
 - reboot
 
 # omarchy requirements (after scripts)
-- DHCP
+- DHCP (Omarchy Menu -> Setup -> DNS -> DHCP, required for cloudflare DoT and DNSSEC)

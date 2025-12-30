@@ -2,7 +2,7 @@
 
 # https://github.com/CachyOS/CachyOS-Settings
 # https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
-# https://wiki.cachyos.org/
+# https://wiki.cachyos.org
 # https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 # https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 # https://wiki.archlinux.org/title/Sysctl#Improving_performance
