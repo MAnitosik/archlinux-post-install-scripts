@@ -10,6 +10,7 @@
 # https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 # https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
 # https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
+# https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
