@@ -25,6 +25,3 @@
 
 # lact (amd overclocking guide)
 - https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
-
-# alhp (x86-64-v3 repositories for archlinux)
-- https://somegit.dev/ALHP/ALHP.GO

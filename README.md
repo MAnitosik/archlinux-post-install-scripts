@@ -10,9 +10,6 @@
 - NETWORK IS PRIMALY OPTIMISED FOR RUSSIA (ZAPRET, HOSTS FILE AND "cfg80211.ieee80211_regdom")
 - MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL (BLUETOOTH, AUDIO ETC...)
 
-# hardware requirements
-- x86-64-v3 capable CPU
-
 # archinstall requirements (while installation)
 - UKI
 - EFI stub
