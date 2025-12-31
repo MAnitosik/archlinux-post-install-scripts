@@ -13,6 +13,3 @@ sudo pacman -Rns lazygit lazydocker btop obsidian localsend libreoffice-fresh si
 omarchy-channel-set stable
 sudo pacman -Syuu
 sudo pacman -S --needed flatpak
-
-# required for the sysctl config (98-arch.conf)
-sudo modprobe tcp_bbr
