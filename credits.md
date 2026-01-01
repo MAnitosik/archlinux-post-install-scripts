@@ -9,7 +9,7 @@
 # flowseal zapret (hosts file - discord)
 - https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 
-# archlinux wiki (performance configs, uki configuration guide, systemd-resolved dnssec + dot, regulatory domain, hosts localhost configuration)
+# archlinux wiki (performance configs, uki configuration guide, systemd-resolved dnssec + dot, regulatory domain, hosts configuration)
 - https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 - https://wiki.archlinux.org/title/Sysctl#Improving_performance
 - https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC

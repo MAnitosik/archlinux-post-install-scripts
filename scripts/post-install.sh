@@ -4,13 +4,15 @@
 # https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
 # https://wiki.cachyos.org
 # https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
+# https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 # https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 # https://wiki.archlinux.org/title/Sysctl#Improving_performance
 # https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
 # https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 # https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
+# https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
+# https://man.archlinux.org/man/hosts.5.en
 # https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
-# https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
@@ -44,7 +46,7 @@ sudo systemctl enable --now bpftune
 # resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
 # zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd (lvfs)
 # adding some basic support for windows apps with wine-staging (+deps) and winetricks (+deps)
-# amneziavpn-bin is for VPN, v2rayn-bin is for vless, ventoy-bin is for a usb drive
+# amneziavpn-bin is for VPN, throne-bin is for vless, ventoy-bin is for a usb drive
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
 # Desktop Plus is for a github intergration
@@ -55,7 +57,7 @@ sudo pacman -S --noconfirm --needed wine-staging
 sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono gnutls sdl2-compat gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg samba
 sudo pacman -S --noconfirm --needed winetricks
 sudo pacman -S --noconfirm --needed --asdeps zenity
-yay -S --noconfirm --needed amneziavpn-bin v2rayn-bin ventoy-bin
+yay -S --noconfirm --needed amneziavpn-bin throne-bin ventoy-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
 flatpak install -y flathub io.github.pol_rivero.github-desktop-plus

@@ -11,14 +11,9 @@
 - MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL (BLUETOOTH, AUDIO ETC...)
 
 # archinstall requirements (while installation)
-- UKI
-- EFI stub
+- UKI + EFI stub
 - Xorg + graphics drivers (archinstall profile)
 - multilib
-
-# archinstall recommendations (optional, for the best performance)
-- filesystem: xfs / ext4
-- kernel: linux-zen
 
 # sequence of scripts (after archinstall, in the installed OS)
 - zapret.sh (optional)
