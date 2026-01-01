@@ -18,10 +18,9 @@
 - https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 - https://man.archlinux.org/man/hosts.5.en
 
-# omarchy (manual - useful info, github - pacman + hypr configs)
+# omarchy (manual - useful info, github - hypr configs)
 - https://github.com/basecamp/omarchy/tree/master/config/hypr
 - https://learn.omacom.io/2/the-omarchy-manual
-- https://github.com/basecamp/omarchy/tree/master/default/pacman
 
 # lact (amd overclocking guide)
 - https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
