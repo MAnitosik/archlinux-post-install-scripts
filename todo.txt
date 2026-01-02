@@ -1,2 +1,1 @@
 - 1 file script for everything in this repository
-- file which explains the architecture of this project

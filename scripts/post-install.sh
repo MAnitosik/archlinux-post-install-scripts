@@ -1,7 +1,6 @@
 # CachyOS settings + my own sauce - start
 
 # https://github.com/CachyOS/CachyOS-Settings
-# https://github.com/CachyOS/CachyOS-PKGBUILDS/tree/master/bpftune-git
 # https://wiki.cachyos.org
 # https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 # https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
@@ -35,8 +34,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
 git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
-cd ./CachyOS-bpftune-git
-makepkg -sirc
+makepkg -sirc --dir ./CachyOS-bpftune-git
 sudo systemctl enable --now bpftune
 
 # CachyOS settings + my own sauce - end
