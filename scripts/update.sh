@@ -1,4 +1,4 @@
-rm -r CachyOS-bpftune-git
+rm -rf ./CachyOS-bpftune-git
 
 git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
 makepkg -sirc --dir ./CachyOS-bpftune-git
