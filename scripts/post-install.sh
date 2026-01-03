@@ -2,6 +2,7 @@
 
 # https://github.com/CachyOS/CachyOS-Settings
 # https://wiki.cachyos.org
+# https://wiki.archlinux.org/title/CPU_frequency_scaling#amd_pstate
 # https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 # https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 # https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations

@@ -1,5 +1,6 @@
 # /etc/cmdline.d/cmdline.conf
 - https://wiki.cachyos.org
+- https://wiki.archlinux.org/title/CPU_frequency_scaling#amd_pstate
 - https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 - https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
 - https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
