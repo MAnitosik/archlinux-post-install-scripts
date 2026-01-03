@@ -5,6 +5,9 @@
 - https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 - https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
 
+# /etc/makepkg.conf.d/rust.conf
+- https://github.com/CachyOS/CachyOS-PKGBUILDS
+
 # /etc/scx_loader/config.toml
 - https://wiki.cachyos.org
 
@@ -29,6 +32,9 @@
 - https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 - https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 - https://man.archlinux.org/man/hosts.5.en
+
+# /etc/makepkg.conf
+- https://github.com/CachyOS/CachyOS-PKGBUILDS
 
 # /hypr/
 - https://github.com/basecamp/omarchy/tree/master/config/hypr

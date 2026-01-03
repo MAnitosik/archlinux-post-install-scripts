@@ -1,3 +1,6 @@
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/makepkg.conf | sudo tee /etc/makepkg.conf
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/makepkg.conf.d/rust.conf | sudo tee /etc/makepkg.conf.d/rust.conf
+
 rm -rf ./CachyOS-bpftune-git
 
 git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
