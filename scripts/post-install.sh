@@ -33,6 +33,9 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
+sudo pacman -S --noconfirm --needed cpupower
+sudo cpupower frequency-set -g schedutil
+
 git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
 makepkg -sirc --dir ./CachyOS-bpftune-git
 sudo systemctl enable --now bpftune
