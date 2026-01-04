@@ -13,6 +13,7 @@
 # https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 # https://man.archlinux.org/man/hosts.5.en
 # https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
+# https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
 
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 

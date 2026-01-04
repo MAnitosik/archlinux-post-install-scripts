@@ -11,6 +11,7 @@
 
 # /etc/scx_loader/config.toml
 - https://wiki.cachyos.org
+- https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
 
 # /etc/sysctl.d/
 - https://github.com/CachyOS/CachyOS-Settings

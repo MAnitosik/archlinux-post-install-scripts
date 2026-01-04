@@ -1,3 +1,6 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project (not related to architecture.md, even more detailed)
 - less cachyos, more archwiki optimisations/configs
+- make sure that every needed programm installed and enabled (e.g. zram-generator for zram-generator.conf tho it should be installed by default already)
+- chore: read more arch wiki for optional deps for programms I install, also check if config files are in correct locations so it works
+- UPower in scripts (currently not used due to need to read more wiki)
