@@ -19,7 +19,6 @@
 # sequence of scripts (after archinstall, in the installed OS)
 - git clone --depth 1 https://github.com/MAnitosik/archlinux-post-install-scripts.git
 - cd ./archlinux-post-install-scripts/scripts/
-- bash zapret.sh (optional, may be deprecated in the future in the favor of amneziavpn/throne)
 - bash omarchy.sh / bash omarchy-alt.sh (omarchy will prompt you to reboot after installation, use omarchy-alt.sh in the case omarchy.sh does not work for you)
 - cd ./archlinux-post-install-scripts/scripts/
 - bash requirements.sh

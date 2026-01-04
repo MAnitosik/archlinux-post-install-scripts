@@ -1,53 +1,64 @@
-# CachyOS settings + my own sauce - start
+# Optimisations - start
 
-# https://github.com/CachyOS/CachyOS-Settings
+# some deps for apps (took from post install recommendations)
 # https://wiki.cachyos.org
-# https://wiki.archlinux.org/title/CPU_frequency_scaling#amd_pstate
-# https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
-# https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
-# https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
-# https://wiki.archlinux.org/title/Sysctl#Improving_performance
-# https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
-# https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
-# https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
-# https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
-# https://man.archlinux.org/man/hosts.5.en
-# https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
-# https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
-# https://github.com/CachyOS/CachyOS-PKGBUILDS
-# https://wiki.archlinux.org/title/Laptop#UPower
-# https://gitlab.freedesktop.org/upower/upower
-
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
+# configuring kernel command line (took most of settings from cachyos wiki, regulatory domain is set to russia)
+# https://wiki.cachyos.org
+# https://wiki.archlinux.org/title/CPU_frequency_scaling#amd_pstate
+# https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
+# https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
+# https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
+# https://github.com/ilya-zlobintsev/LACT
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/cmdline.d/cmdline.conf | sudo tee /etc/cmdline.d/cmdline.conf
 
+# configuring environment for wine and amd (took from gaming section, settings still may be useful for casual users too)
+# https://wiki.cachyos.org
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/environment | sudo tee /etc/environment
 
+# using sched-ext (mostly took from cachyos guide on sched-ext, but also took a lot of info from official sched-ext resources)
+# https://wiki.cachyos.org
+# https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
 sudo pacman -S --noconfirm --needed scx-scheds scx-tools
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/scx_loader/config.toml | sudo tee /etc/scx_loader/config.toml
 sudo systemctl enable --now scx_loader.service
 
+# configuring network (mostly for russia)
+# https://wiki.archlinux.org/title/Sysctl#Improving_performance
+# https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
+# https://man.archlinux.org/man/hosts.5.en
+# https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
+# https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
+# https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 sudo modprobe tcp_bbr
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/98-arch.conf | sudo tee /etc/sysctl.d/98-arch.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/resolved.conf.d/resolved.conf | sudo tee /etc/systemd/resolved.conf.d/resolved.conf
 
+# using cachyos settings (took only settings related to ram, kernel and scheduler)
+# https://github.com/CachyOS/CachyOS-Settings
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/70-cachyos-settings.conf | sudo tee /etc/sysctl.d/70-cachyos-settings.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/zram-generator.conf | sudo tee /etc/systemd/zram-generator.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
+# configuring upower for laptops (took default config from gitlab and location of config from archwiki)
+# https://wiki.archlinux.org/title/Laptop#UPower
+# https://gitlab.freedesktop.org/upower/upower
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf
 
+# setting cpu governor to schedutil (took from archwiki, note: needed to configure bpfland to work with schedutil)
 sudo pacman -S --noconfirm --needed cpupower
 sudo cpupower frequency-set -g schedutil
 
+# installing bpftune by oracle (useful for configuring sysctl on the fly without any manual intervention)
+# https://github.com/CachyOS/CachyOS-PKGBUILDS
 git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
 makepkg -sirc --dir ./CachyOS-bpftune-git
 sudo systemctl enable --now bpftune
 
-# CachyOS settings + my own sauce - end
+# Optimisations - end
 
 
 # installing some base packages
@@ -60,7 +71,7 @@ sudo systemctl enable --now bpftune
 # Desktop Plus is for a github intergration
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
-# https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
+# https://github.com/ilya-zlobintsev/LACT
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
 sudo pacman -S --noconfirm --needed wine-staging

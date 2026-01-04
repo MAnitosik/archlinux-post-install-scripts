@@ -4,7 +4,7 @@
 - https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
 - https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
 - https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
-- https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
+- https://github.com/ilya-zlobintsev/LACT
 
 # /etc/makepkg.conf.d/rust.conf
 - https://github.com/CachyOS/CachyOS-PKGBUILDS
