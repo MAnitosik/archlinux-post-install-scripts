@@ -27,6 +27,10 @@
 # /etc/udev/rules.d/
 - https://github.com/CachyOS/CachyOS-Settings
 
+# /etc/UPower/UPower.conf
+- https://wiki.archlinux.org/title/Laptop#UPower
+- https://gitlab.freedesktop.org/upower/upower
+
 # /etc/environment
 - https://wiki.cachyos.org
 
@@ -39,5 +43,5 @@
 - https://github.com/CachyOS/CachyOS-PKGBUILDS
 
 # /hypr/
-- https://github.com/basecamp/omarchy/tree/master/config/hypr
+- https://github.com/basecamp/omarchy
 - https://learn.omacom.io/2/the-omarchy-manual

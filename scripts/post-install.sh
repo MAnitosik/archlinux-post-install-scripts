@@ -14,6 +14,9 @@
 # https://man.archlinux.org/man/hosts.5.en
 # https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
 # https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
+# https://github.com/CachyOS/CachyOS-PKGBUILDS
+# https://wiki.archlinux.org/title/Laptop#UPower
+# https://gitlab.freedesktop.org/upower/upower
 
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
@@ -35,6 +38,8 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf
+
 sudo pacman -S --noconfirm --needed cpupower
 sudo cpupower frequency-set -g schedutil
 
@@ -54,6 +59,8 @@ sudo systemctl enable --now bpftune
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
 # Desktop Plus is for a github intergration
 # https://learn.omacom.io/2/the-omarchy-manual
+# https://github.com/basecamp/omarchy
+# https://github.com/ilya-zlobintsev/LACT/wiki/Overclocking-(AMD)
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
 sudo pacman -S --noconfirm --needed wine-staging
@@ -68,7 +75,7 @@ sudo systemctl enable --now lactd
 
 # installing modified omarchy hyprland configs
 # https://learn.omacom.io/2/the-omarchy-manual
-# https://github.com/basecamp/omarchy/tree/master/config/hypr
+# https://github.com/basecamp/omarchy
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.conf | tee ~/.config/hypr/bindings.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/hyprsunset.conf | tee ~/.config/hypr/hyprsunset.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/input.conf | tee ~/.config/hypr/input.conf
