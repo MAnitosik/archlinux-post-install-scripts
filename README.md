@@ -41,3 +41,14 @@
 - cd ./scripts/
 - bash update.sh
 - reboot (super + esc -> restart)
+
+# configuration recommendations
+- Aether (pre-installed app to configure the look of your system)
+- delete all web apps (my personal choice, Omarchy Menu -> Remove -> Web App -> ctrl + a -> enter -> enter)
+- delete optional TUI (they will not work properly anyways, Omarchy Menu -> Remove -> TUI -> ctrl + a -> enter -> enter)
+- configure your monitor in ~/.config/hypr/monitors.conf
+- LACT (configure your GPU)
+- configure wine in winetricks for wider windows apps support
+- configure amneziavpn/throne so you can always have access to the internet
+- download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
+> I do not need to tell you that you need to update your system and these config files
