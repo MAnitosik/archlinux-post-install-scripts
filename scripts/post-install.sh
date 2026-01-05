@@ -48,7 +48,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 # https://gitlab.freedesktop.org/upower/upower
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf
 
-# setting cpu governor to schedutil (took from archwiki, note: needed to configure bpfland to work with schedutil)
+# setting cpu governor to schedutil (took from archwiki, note: needed to configure bpfland to work with schedutil, took default config from gitlab)
 # https://gitlab.archlinux.org/archlinux/packaging/packages/linux-tools
 # https://wiki.archlinux.org/title/CPU_frequency_scaling#cpupower
 sudo pacman -S --noconfirm --needed cpupower
