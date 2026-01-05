@@ -24,8 +24,9 @@
 - bash requirements.sh
 - reboot (super + esc -> restart)
 - cd ./archlinux-post-install-scripts/scripts/
-- post-install.sh
-- gaming.sh (optional)
+- bash post-install.sh
+- bash laptop.sh (optional)
+- bash gaming.sh (optional)
 - reboot (super + esc -> restart)
 
 # omarchy requirements (after scripts)

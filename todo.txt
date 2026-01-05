@@ -2,3 +2,4 @@
 - a detailed file which explains the architecture of this project (not related to architecture.md, even more detailed, should explain the point of everything in this project)
 - less cachyos, more archwiki optimisations/configs
 - cpupower config + systemd unit
+- analyzing boot times and ways to minimize them

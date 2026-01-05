@@ -1,5 +1,5 @@
 default_sched = "scx_bpfland"
-default_mode = "Auto"
+default_mode = "PowerSave"
 [scheds.scx_bpfland]
 auto_mode = ["-f"]
 powersave_mode = ["-f", "-s", "20000", "-m", "powersave", "-I", "100", "-t", "100"]
