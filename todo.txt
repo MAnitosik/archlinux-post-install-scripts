@@ -3,3 +3,4 @@
 - less cachyos, more archwiki optimisations/configs
 - cpupower config + systemd unit
 - analyzing boot times and ways to minimize them
+- hibernation issues on laptops (related to swap somehow, probably gonna just change it to sleep in upower config)
