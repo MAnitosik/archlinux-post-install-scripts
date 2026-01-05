@@ -5,7 +5,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 sudo pacman -S --noconfirm --needed lib32-mesa lib32-vulkan-radeon
 sudo pacman -S --noconfirm --needed steam
 flatpak install -y flathub net.davidotek.pupgui2
-echo "Install custom versions of proton using protonup-qt, personally I recommend proton-cachyos (you need to open steam in the first place so protonup-qt can find your steam files location"
+echo "Install custom versions of proton using protonup-qt, personally I recommend proton-cachyos (you need to open steam in the first place so protonup-qt can find your steam files location)"
 echo "INFO: STEAM OVERLAY WILL NOT WORK DUE TO WAYLAND VARIABLES FOR PROTON (NEEDED FOR BETTER PERFORMANCE)"
 echo "TIP: DO NOT ENABLE SHADER PRE-CACHING ON MODERN COMPUTERS, DO NOT USE STEAM GAME RECORDER TO AVOID STUTTERS"
 touch ./gaming

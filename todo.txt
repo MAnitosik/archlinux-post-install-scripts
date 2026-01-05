@@ -1,6 +1,3 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project (not related to architecture.md, even more detailed, should explain the point of everything in this project)
-- less cachyos, more archwiki optimisations/configs
-- cpupower config + systemd unit
-- hibernation issues on laptops (related to swap somehow, probably gonna just change it to poweroff in upower config)
-- add waydroid support, look deeper into wine app support
+- more gaming support

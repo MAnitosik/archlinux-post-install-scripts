@@ -6,6 +6,7 @@ sudo mkdir /etc/systemd/resolved.conf.d/
 sudo mkdir /etc/udev/rules.d/
 sudo mkdir /etc/makepkg.conf.d/
 sudo mkdir /etc/UPower/
+sudo mkdir /etc/default/
 
 # changing the update channel to the stable branch, deleting some base omarchy packages, installing flatpak and fully updating the system
 # lazygit and lazydocker are not needed, obsidian is just a smart note taking app, localsend is useless for me

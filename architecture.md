@@ -6,6 +6,10 @@
 - https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 - https://github.com/ilya-zlobintsev/LACT
 
+# /etc/default/cpupower
+- https://wiki.archlinux.org/title/CPU_frequency_scaling#cpupower
+- https://gitlab.archlinux.org/archlinux/packaging/packages/linux-tools
+
 # /etc/makepkg.conf.d/rust.conf
 - https://github.com/CachyOS/CachyOS-PKGBUILDS
 

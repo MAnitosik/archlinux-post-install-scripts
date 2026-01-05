@@ -49,8 +49,11 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf
 
 # setting cpu governor to schedutil (took from archwiki, note: needed to configure bpfland to work with schedutil)
+# https://gitlab.archlinux.org/archlinux/packaging/packages/linux-tools
+# https://wiki.archlinux.org/title/CPU_frequency_scaling#cpupower
 sudo pacman -S --noconfirm --needed cpupower
-sudo cpupower frequency-set -g schedutil
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/default/cpupower | sudo tee /etc/default/cpupower
+sudo systemctl enable --now cpupower
 
 # installing bpftune by oracle (useful for configuring sysctl on the fly without any manual intervention)
 # https://github.com/CachyOS/CachyOS-PKGBUILDS
@@ -64,7 +67,6 @@ sudo systemctl enable --now bpftune
 # installing some base packages
 # resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
 # zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd (lvfs)
-# adding some basic support for windows apps with wine-staging (+deps) and winetricks (+deps)
 # amneziavpn-bin is for VPN, throne-bin is for vless, ventoy-bin is for a usb drive
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
@@ -74,15 +76,20 @@ sudo systemctl enable --now bpftune
 # https://github.com/ilya-zlobintsev/LACT
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
-sudo pacman -S --noconfirm --needed wine-staging
-sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono gnutls sdl2-compat gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg samba
-sudo pacman -S --noconfirm --needed winetricks
-sudo pacman -S --noconfirm --needed --asdeps zenity
 yay -S --noconfirm --needed amneziavpn-bin throne-bin ventoy-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
 flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
 sudo systemctl enable --now lactd
+
+# adding some basic support for windows apps with wine-staging (+deps) and winetricks (+deps)
+sudo pacman -S --noconfirm --needed wine-staging
+sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono gnutls sdl2-compat gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg samba
+sudo pacman -S --noconfirm --needed winetricks
+sudo pacman -S --noconfirm --needed --asdeps zenity
+winetricks fontsmooth=rgb
+winetricks dxvk
+winetricks vkd3d
 
 # installing modified omarchy hyprland configs
 # https://learn.omacom.io/2/the-omarchy-manual
