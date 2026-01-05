@@ -3,3 +3,4 @@
 - less cachyos, more archwiki optimisations/configs
 - cpupower config + systemd unit
 - hibernation issues on laptops (related to swap somehow, probably gonna just change it to poweroff in upower config)
+- add waydroid support, look deeper into wine app support
