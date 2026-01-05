@@ -1,16 +1,19 @@
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MAnitosik/archlinux-post-install-scripts)
 
 # WARNING
+- DO NOT USE THESE SCIPTS, THEY WERE MADE FOR MYSELF AND SHOULD NOT BE USED BY ANYONE ELSE, I AM NOT RESPONSIBLE IF YOU BREAK YOUR SYSTEM SOMEHOW
 - NOT FOR NEWBIES, USE FRIENDLY LINUX DISTRIBUTIONS (LINUX MINT, FEDORA KDE ETC...)
 - DOES NOT SUPPORT DUAL-BOOT (AND WILL NOT SUPPORT DUAL-BOOT)
 - PRIMALY OPTIMISED FOR AMD-POWERED SYSTEMS (GPU AND CPU)
 - NETWORK IS PRIMALY OPTIMISED FOR RUSSIA (HOSTS FILE AND "cfg80211.ieee80211_regdom")
-- MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL PROPERLY (BLUETOOTH, AUDIO ETC...)
+- MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
 
 # archinstall requirements (while installation)
 - UKI + EFI stub
 - Xorg + GPU drivers (archinstall profile, required for correct gpu drivers)
 - multilib
+- swap partition (linux-swap, mostly required for laptops, choose the size of your ram)
+> MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
 
 # archinstall recommendations
 - ext4 (straight performance, widest support)
