@@ -1,4 +1,4 @@
-# /etc/cmdline.d/cmdline.conf
+### /etc/cmdline.d/cmdline.conf
 - https://wiki.cachyos.org
 - https://wiki.archlinux.org/title/CPU_frequency_scaling#amd_pstate
 - https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
@@ -6,50 +6,50 @@
 - https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 - https://github.com/ilya-zlobintsev/LACT
 
-# /etc/default/cpupower
+### /etc/default/cpupower
 - https://wiki.archlinux.org/title/CPU_frequency_scaling#cpupower
 - https://gitlab.archlinux.org/archlinux/packaging/packages/linux-tools
 
-# /etc/makepkg.conf.d/rust.conf
+### /etc/makepkg.conf.d/rust.conf
 - https://github.com/CachyOS/CachyOS-PKGBUILDS
 
-# /etc/scx_loader/config.toml
+### /etc/scx_loader/config.toml
 - https://wiki.cachyos.org
 - https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
 
-# /etc/sysctl.d/
+### /etc/sysctl.d/
 - https://github.com/CachyOS/CachyOS-Settings
 - https://wiki.archlinux.org/title/Sysctl#Improving_performance
 
-# /etc/systemd/resolved.conf.d/resolved.conf
+### /etc/systemd/resolved.conf.d/resolved.conf
 - https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
 - https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 
-# /etc/systemd/logind.conf
+### /etc/systemd/logind.conf
 - https://wiki.archlinux.org/title/Power_management#ACPI_events
 - https://github.com/systemd/systemd
 
-# /etc/systemd/zram-generator.conf
+### /etc/systemd/zram-generator.conf
 - https://github.com/CachyOS/CachyOS-Settings
 
-# /etc/udev/rules.d/
+### /etc/udev/rules.d/
 - https://github.com/CachyOS/CachyOS-Settings
 
-# /etc/UPower/UPower.conf
+### /etc/UPower/UPower.conf
 - https://wiki.archlinux.org/title/Laptop#UPower
 - https://gitlab.freedesktop.org/upower/upower
 
-# /etc/environment
+### /etc/environment
 - https://wiki.cachyos.org
 
-# /etc/hosts
+### /etc/hosts
 - https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 - https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 - https://man.archlinux.org/man/hosts.5.en
 
-# /etc/makepkg.conf
+### /etc/makepkg.conf
 - https://github.com/CachyOS/CachyOS-PKGBUILDS
 
-# /hypr/
+### /hypr/
 - https://github.com/basecamp/omarchy
 - https://learn.omacom.io/2/the-omarchy-manual

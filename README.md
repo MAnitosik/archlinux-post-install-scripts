@@ -69,4 +69,5 @@ reboot (super + esc -> restart)
 - configure wine in winetricks for wider windows apps support
 - configure amneziavpn/throne so you can always have access to the internet
 - download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
+- configure omarchy style (Omarchy Menu -> Style)
 > I do not need to tell you that you need to update your system and these config files sometimes
