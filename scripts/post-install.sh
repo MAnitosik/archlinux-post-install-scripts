@@ -43,10 +43,13 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
-# configuring upower for laptops (took default config from gitlab and location of config from archwiki)
+# configuring upower and logind for laptops (took default UPower config from gitlab and location of Upower config from archwiki, took default logind config from github)
 # https://wiki.archlinux.org/title/Laptop#UPower
 # https://gitlab.freedesktop.org/upower/upower
+# https://wiki.archlinux.org/title/Power_management#ACPI_events
+# https://github.com/systemd/systemd
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/logind.conf | sudo tee /etc/systemd/logind.conf
 
 # setting cpu governor to schedutil (took from archwiki, note: needed to configure bpfland to work with schedutil, took default config from gitlab)
 # https://gitlab.archlinux.org/archlinux/packaging/packages/linux-tools

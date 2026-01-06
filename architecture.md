@@ -25,6 +25,10 @@
 - https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
 - https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 
+# /etc/systemd/logind.conf
+- https://wiki.archlinux.org/title/Power_management#ACPI_events
+- https://github.com/systemd/systemd
+
 # /etc/systemd/zram-generator.conf
 - https://github.com/CachyOS/CachyOS-Settings
 
