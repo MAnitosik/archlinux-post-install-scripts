@@ -2,3 +2,4 @@
 - a detailed file which explains the architecture of this project (not related to architecture.md, even more detailed, should explain the point of everything in this project)
 - more gaming support (steam related)
 - zapret2 (https://github.com/bol-van/zapret2)
+- update comments (they suck and my grammar sucks, lol)
