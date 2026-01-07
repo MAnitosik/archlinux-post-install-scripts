@@ -46,6 +46,7 @@ reboot (super + esc -> restart)
 
 ### omarchy requirements (after scripts)
 - DHCP (Omarchy Menu -> Setup -> DNS -> DHCP, required for cloudflare DoT and DNSSEC)
+- **DO NOT** ENABLE HIBERNATE VIA OMARCHY MENU
 
 ### updating config files
 ```
@@ -70,4 +71,8 @@ reboot (super + esc -> restart)
 - configure amneziavpn/throne so you can always have access to the internet
 - download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
 - configure omarchy style (Omarchy Menu -> Style)
+- enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
 > I do not need to tell you that you need to update your system and these config files sometimes
+
+### best gamescope config
+- planned

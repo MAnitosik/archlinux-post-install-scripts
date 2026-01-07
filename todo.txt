@@ -1,5 +1,6 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project
 - update comments (they suck and my grammar sucks, lol)
-- update readme to latest omarchy version
-- gamescope guide
+- gamescope guide/script
+- find a better solution than throne for v2ray
+- more laptop specific optimisations

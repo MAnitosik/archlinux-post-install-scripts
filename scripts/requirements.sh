@@ -15,6 +15,7 @@ sudo mkdir /etc/default/
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
 sudo pacman -Rns lazygit lazydocker btop obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
+rm ~/.local/share/applications/typora.desktop
 sudo systemctl disable --now power-profiles-daemon
 sudo pacman -Rns power-profiles-daemon
 omarchy-channel-set stable
