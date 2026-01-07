@@ -1,6 +1,7 @@
 Super + Space | Application launcher
 Super + Alt + Space | Omarchy control menu
 Super + Escape | Lock/suspend/relaunch/restart/shutdown computer
+Super + Ctrl + L | Lock computer
 Super + W | Close window
 Super + T | Toggle window between tiling/floating
 Super + F | Go full screen
