@@ -1,5 +1,5 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project
-- more gaming support (steam related)
 - update comments (they suck and my grammar sucks, lol)
-- omarchy will probably break non-ext4 laptops with hibernation support in the near future, need to do something with it
+- update readme to latest omarchy version
+- gamescope guide
