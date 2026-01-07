@@ -1,5 +1,5 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project (not related to architecture.md, even more detailed, should explain the point of everything in this project)
 - more gaming support (steam related)
-- zapret2 (https://github.com/bol-van/zapret2)
 - update comments (they suck and my grammar sucks, lol)
+- remove some laptop related settings since omarchy is planning to add hibernation support on their side (probably will only need to remove logind.conf since I didnt plan to add this on my side anyways)
