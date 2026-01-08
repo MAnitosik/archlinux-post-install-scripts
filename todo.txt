@@ -2,5 +2,5 @@
 - a detailed file which explains the architecture of this project
 - update comments (they suck and my grammar sucks, lol), fix grammar overall everywhere (probably gonna just use AI for such minor issues since I am still not fluent in english)
 - gamescope guide/script (gaming overall)
-- find a better solution than throne for v2ray
+- use v2raya instead of throne
 - more laptop specific optimisations (not sure tho)
