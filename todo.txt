@@ -3,4 +3,4 @@
 - update comments (they suck and my grammar sucks, lol)
 - gamescope guide/script
 - find a better solution than throne for v2ray
-- more laptop specific optimisations
+- more laptop specific optimisations (not sure tho)
