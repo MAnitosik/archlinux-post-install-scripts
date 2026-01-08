@@ -1,6 +1,6 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project
 - update comments (they suck and my grammar sucks, lol), fix grammar overall everywhere (probably gonna just use AI for such minor issues since I am still not fluent in english)
-- gamescope guide/script (gaming overall), add mangohud
+- gamescope guide/script (gaming overall), add mangohud, deprecate proton wayland envs in favor of gamescope
 - use v2raya instead of throne
 - more laptop specific optimisations (not sure tho)
