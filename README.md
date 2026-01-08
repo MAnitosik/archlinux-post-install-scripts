@@ -75,8 +75,8 @@ reboot (super + esc -> restart)
 - enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
 > I do not need to tell you that you need to update your system and these config files sometimes
 
-### gaming section (gamescope for the most part probably)
-- planned
+### gaming
+- [gaming.md](https://github.com/MAnitosik/archlinux-post-install-scripts/blob/main/gaming.md)
 
 ### deleted omarchy applications
 ```
