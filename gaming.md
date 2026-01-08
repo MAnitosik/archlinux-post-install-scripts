@@ -6,6 +6,10 @@ see this - [How to Properly Set Multiple Launch Options](https://wiki.cachyos.or
 ### gamescope
 [Fix Stuttering for gamescope](https://wiki.archlinux.org/title/Gamescope#Launching_gamescope_from_Steam,_stuttering_after_~24_minutes_(Gamescope_Lag_Bomb))
 
+[arch wiki](https://wiki.archlinux.org/title/Gamescope)
+
+[valve github](https://github.com/ValveSoftware/gamescope/blob/master/README.md)
+
 my personal gamescope launch options:
 ```
 gamescope -W 1920 -H 1080 -w 1920 -h 1080 -r 200 -o 60 -F fsr -S stretch -f --adaptive-sync --force-grab-cursor
