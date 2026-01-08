@@ -1,12 +1,13 @@
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/MAnitosik/archlinux-post-install-scripts)
 
 ### WARNING
-- DO NOT USE THESE SCIPTS, THEY WERE MADE FOR MYSELF AND SHOULD NOT BE USED BY ANYONE ELSE, I AM NOT RESPONSIBLE IF YOU BREAK YOUR SYSTEM SOMEHOW
+- **READ THIS FILE BEFORE DOING ANYTHING TO YOUR SYSTEM**
+- **DO NOT** USE THESE SCIPTS, THEY WERE MADE FOR MYSELF AND SHOULD NOT BE USED BY ANYONE ELSE, I AM NOT RESPONSIBLE IF YOU BREAK YOUR SYSTEM SOMEHOW
 - NOT FOR NEWBIES, USE FRIENDLY LINUX DISTRIBUTIONS (LINUX MINT, FEDORA KDE ETC...)
 - DOES NOT SUPPORT DUAL-BOOT (AND WILL NOT SUPPORT DUAL-BOOT)
-- PRIMALY OPTIMISED FOR AMD-POWERED SYSTEMS (GPU AND CPU)
-- NETWORK IS PRIMALY OPTIMISED FOR RUSSIA (HOSTS FILE AND "cfg80211.ieee80211_regdom")
-- MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
+- PRIMALY OPTIMISED FOR **AMD-POWERED SYSTEMS** (GPU AND CPU)
+- NETWORK IS PRIMALY OPTIMISED FOR **RUSSIA** (HOSTS FILE AND "cfg80211.ieee80211_regdom")
+- MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN **ARCHINSTALL** PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
 
 ### archinstall requirements (while installation)
 - UKI + EFI stub
@@ -74,5 +75,43 @@ reboot (super + esc -> restart)
 - enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
 > I do not need to tell you that you need to update your system and these config files sometimes
 
-### best gamescope config
+### gaming section (gamescope for the most part probably)
 - planned
+
+### deleted omarchy applications
+```
+lazygit
+lazydocker
+btop
+obsidian
+localsend
+libreoffice-fresh
+signal-desktop
+kdenlive
+1password-beta
+1password-cli
+typora
+spotify
+```
+
+### installed applications by these scripts
+```
+resources
+telegram-desktop
+video-trimmer
+ONLYOFFICE
+
+zed
+torbrowser-launcher
+lact
+gnome-boxes
+gnome-firmware
+amneziavpn-bin
+throne-bin (will be deprecated in the near future)
+ventoy-bin
+Bazaar
+
+wine-staging
+winetricks
+```
+> power-profiles-daemon was deleted in favor of cpupower (schedutil governor) to use it with sched-ext (scx_bpfland)

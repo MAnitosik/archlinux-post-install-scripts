@@ -1,7 +1,6 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project
-- update comments (they suck and my grammar sucks, lol)
-- gamescope guide/script
+- update comments (they suck and my grammar sucks, lol), fix grammar overall everywhere (probably gonna just use AI for such minor issues since I am still not fluent in english)
+- gamescope guide/script (gaming overall)
 - find a better solution than throne for v2ray
 - more laptop specific optimisations (not sure tho)
-- update readme about PPD and not working features compared to normal omarchy
