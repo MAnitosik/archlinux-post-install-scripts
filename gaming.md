@@ -1,8 +1,6 @@
 ### steam
 see this - [How to Properly Set Multiple Launch Options](https://wiki.cachyos.org/configuration/gaming/#how-to-properly-set-multiple-launch-options)
 
-[Fix Stuttering](https://wiki.cachyos.org/configuration/gaming/#fix-stuttering-caused-by-the-steam-game-recorder-feature)
-
 ### gamescope
 [arch wiki](https://wiki.archlinux.org/title/Gamescope)
 
@@ -15,12 +13,12 @@ gamescope -W 1920 -H 1080 -w 1920 -h 1080 -r 200 -o 60 -F fsr -S stretch -f --ad
 
 same but for steam:
 ```
-LD_PRELOAD="" gamescope -W 1920 -H 1080 -w 1920 -h 1080 -r 200 -o 60 -F fsr -S stretch -f --adaptive-sync --force-grab-cursor -- %command%
+gamescope -W 1920 -H 1080 -w 1920 -h 1080 -r 200 -o 60 -F fsr -S stretch -f --adaptive-sync --force-grab-cursor -- %command%
 ```
 
 same but for TF2:
 ```
-LD_PRELOAD="" gamescope -W 1920 -H 1080 -w 1920 -h 1080 -r 200 -o 60 -F fsr -S stretch -f --adaptive-sync --force-grab-cursor -- %command% -novid -nojoy -nosteamcontroller -nohltv -particles 1
+gamescope -W 1920 -H 1080 -w 1920 -h 1080 -r 200 -o 60 -F fsr -S stretch -f --adaptive-sync --force-grab-cursor -- %command% -novid -nojoy -nosteamcontroller -nohltv -particles 1
 ```
 
 ### mangohud
