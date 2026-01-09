@@ -3,4 +3,3 @@
 - fix grammar everywhere in this repo
 - use v2raya instead of throne (+ configure v2raya)
 - more laptop specific optimisations (not sure tho)
-- maybe change opencoder to smth else like qwen-coder (thinking about it because opencoder is temporally free as far as I get it)
