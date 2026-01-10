@@ -70,7 +70,7 @@ sudo systemctl enable --now bpftune
 # installing some base packages
 # resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
 # zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd (lvfs)
-# amneziavpn-bin is for VPN, throne-bin is for VLESS, ventoy-bin is for a usb drive
+# ventoy-bin is for a usb drive, amneziavpn-bin is for VPN, v2raya-bin is for proxy (xray-bin is a dep)
 # Bazaar is for flatpaks (why not)
 # onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
 # Desktop Plus is for a github intergration
@@ -79,11 +79,12 @@ sudo systemctl enable --now bpftune
 # https://github.com/ilya-zlobintsev/LACT
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
-yay -S --noconfirm --needed amneziavpn-bin throne-bin ventoy-bin
+yay -S --noconfirm --needed ventoy-bin amneziavpn-bin v2raya-bin xray-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
 flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
 sudo systemctl enable --now lactd
+sudo systemctl enable --now v2raya
 
 # adding some basic support for windows apps with wine-staging (+deps) and winetricks (+deps)
 sudo pacman -S --noconfirm --needed wine-staging

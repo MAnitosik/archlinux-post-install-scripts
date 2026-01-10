@@ -69,11 +69,15 @@ reboot (super + esc -> restart)
 - configure your monitor in ~/.config/hypr/monitors.conf
 - LACT (configure your GPU)
 - configure wine in winetricks for wider windows apps support
-- configure amneziavpn/throne so you can always have access to the internet
+- configure amneziavpn/v2raya so you can always have access to the internet
 - download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
 - configure omarchy style (Omarchy Menu -> Style)
 - enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
 > I do not need to tell you that you need to update your system and these config files sometimes
+
+### v2raya
+- you can open v2raya at "localhost:2017"
+- [quick start](https://v2raya.org/en/docs/prologue/quick-start/)
 
 ### gaming
 - [gaming.md](https://github.com/MAnitosik/archlinux-post-install-scripts/blob/main/gaming.md)
