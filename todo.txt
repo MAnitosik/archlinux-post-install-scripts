@@ -2,3 +2,4 @@
 - a detailed file which explains the architecture of this project
 - fix grammar everywhere in this repo
 - more laptop specific optimisations (not sure tho)
+- research port forwarding
