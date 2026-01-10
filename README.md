@@ -78,6 +78,10 @@ reboot (super + esc -> restart)
 ### v2raya
 - you can open v2raya at "localhost:2017"
 - [quick start](https://v2raya.org/en/docs/prologue/quick-start/)
+in case you want to disable v2raya:
+```
+sudo systemctl disable --now v2raya
+```
 
 ### gaming
 - [gaming.md](https://github.com/MAnitosik/archlinux-post-install-scripts/blob/main/gaming.md)
