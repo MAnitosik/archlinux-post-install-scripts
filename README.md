@@ -76,7 +76,7 @@ reboot (super + esc -> restart)
 > I do not need to tell you that you need to update your system and these config files sometimes
 
 ### v2raya
-- you can open v2raya at "localhost:2017"
+- you can open v2raya at `localhost:2017`
 - [quick start](https://v2raya.org/en/docs/prologue/quick-start/)
 in case you want to disable v2raya:
 ```
