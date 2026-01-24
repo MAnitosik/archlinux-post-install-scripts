@@ -4,9 +4,9 @@ see this - [How to Properly Set Multiple Launch Options](https://wiki.cachyos.or
 [Fix Stuttering](https://wiki.cachyos.org/configuration/gaming/#fix-stuttering-caused-by-the-steam-game-recorder-feature)
 
 ### gamescope
-[arch wiki](https://wiki.archlinux.org/title/Gamescope)
+[Arch Linux Wiki](https://wiki.archlinux.org/title/Gamescope)
 
-[valve github](https://github.com/ValveSoftware/gamescope/blob/master/README.md)
+[Valve GitHub](https://github.com/ValveSoftware/gamescope/blob/master/README.md)
 
 my personal gamescope launch options:
 ```
