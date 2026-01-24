@@ -1,6 +1,7 @@
 # adding some custom variables for proton
 # installing 32 bit version of gpu drivers, steam, gamescope, mangohud, protonup-qt and discord (32 bit is needed since proton and steam are 32 bit themselves still)
 # https://wiki.cachyos.org
+mkdir ~/.config/user-tmpfiles.d/
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/environment-alt | sudo tee /etc/environment
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/config/user-tmpfiles.d/discord.conf | sudo tee ~/.config/user-tmpfiles.d/discord.conf
 sudo pacman -S --noconfirm --needed lib32-mesa lib32-vulkan-radeon
