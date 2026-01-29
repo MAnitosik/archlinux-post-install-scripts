@@ -81,11 +81,6 @@ ff02::2         ip6-allrouters
 45.155.204.190 open-exp.spotifycdn.com
 45.155.204.190 www-growth.scdn.co
 
-# GitHub Copilot
-144.31.14.104 api.github.com
-144.31.14.104 api.individual.githubcopilot.com
-144.31.14.104 proxy.individual.githubcopilot.com
-
 # JetBrains
 45.155.204.190 datalore.jetbrains.com
 45.155.204.190 plugins.jetbrains.com
