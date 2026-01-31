@@ -73,7 +73,8 @@ reboot (super + esc -> restart)
 - download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
 - configure omarchy style (Omarchy Menu -> Style)
 - enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
-> I do not need to tell you that you need to update your system and these config files sometimes
+- switch to edge update channel if you want latest packages (Omarchy Menu -> Update -> Channel -> Edge)
+> I do not need to tell you that you need to update your system and these config files sometimes (via omarchy utils and my update script)
 
 ### v2raya
 - you can open v2raya at `localhost:2017`

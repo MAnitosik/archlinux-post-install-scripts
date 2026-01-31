@@ -18,7 +18,6 @@ sudo pacman -Rns lazygit lazydocker btop obsidian localsend libreoffice-fresh si
 rm ~/.local/share/applications/typora.desktop
 sudo systemctl disable --now power-profiles-daemon
 sudo pacman -Rns power-profiles-daemon
-omarchy-channel-set stable
 sudo pacman -Syuu
 sudo pacman -S --needed flatpak
 
