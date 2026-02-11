@@ -1,3 +1,4 @@
 - 1 file script for everything in this repository
 - a detailed file which explains the architecture of this project
 - fix grammar everywhere in this repo
+- move environment file to user config (see https://wiki.cachyos.org/configuration/gaming/#increase-maximum-shader-cache-size)
