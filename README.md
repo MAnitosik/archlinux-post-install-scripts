@@ -10,7 +10,7 @@
 - MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN **ARCHINSTALL** PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
 
 ### archinstall requirements (while installation)
-- UKI + EFI stub
+- UKI + Limine
 - Xorg + GPU drivers (archinstall profile, required for correct gpu drivers)
 - multilib
 - swap partition (linux-swap, mostly required for laptops, choose the size of your ram)
