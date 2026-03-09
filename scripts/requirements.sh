@@ -1,9 +1,10 @@
 # preparations
-sudo mkdir -p ~/.config/environment.d/
+mkdir -p ~/.config/environment.d/
 sudo mkdir -p /etc/cmdline.d/
 sudo mkdir -p /etc/default/
 sudo mkdir -p /etc/sysctl.d/
 sudo mkdir -p /etc/scx_loader/
+sudo mkdir -p /etc/systemd/logind.conf.d/
 sudo mkdir -p /etc/systemd/resolved.conf.d/
 sudo mkdir -p /etc/udev/rules.d/
 sudo mkdir -p /etc/makepkg.conf.d/

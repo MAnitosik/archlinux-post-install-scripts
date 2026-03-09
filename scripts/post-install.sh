@@ -15,7 +15,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 
 # configuring environment for wine and amd
 # https://wiki.cachyos.org
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/config/environment.d/environment.conf | sudo tee ~/.config/environment.d/environment.conf
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/config/environment.d/environment.conf | tee ~/.config/environment.d/environment.conf
 
 # using sched-ext
 # https://wiki.cachyos.org
