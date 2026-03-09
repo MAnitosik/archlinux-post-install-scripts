@@ -1,10 +1,10 @@
-# Optimisations - start
+# Optimizations - start
 
-# some deps for apps (took from post install recommendations)
+# some deps for apps
 # https://wiki.cachyos.org
 sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 
-# configuring kernel command line (took most of settings from cachyos wiki, regulatory domain is set to russia)
+# configuring kernel command line
 # https://wiki.cachyos.org
 # https://wiki.archlinux.org/title/CPU_frequency_scaling#amd_pstate
 # https://wiki.archlinux.org/title/Improving_performance#Turn_off_CPU_exploit_mitigations
@@ -13,18 +13,18 @@ sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 # https://github.com/ilya-zlobintsev/LACT
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/cmdline.d/cmdline.conf | sudo tee /etc/cmdline.d/cmdline.conf
 
-# configuring environment for wine and amd (took from gaming section, settings still may be useful for casual users too)
+# configuring environment for wine and amd
 # https://wiki.cachyos.org
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/environment | sudo tee /etc/environment
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/config/environment.d/environment.conf | sudo tee ~/.config/environment.d/environment.conf
 
-# using sched-ext (mostly took from cachyos guide on sched-ext, but also took a lot of info from official sched-ext resources)
+# using sched-ext
 # https://wiki.cachyos.org
 # https://wiki.archlinux.org/title/Improving_performance#CPU_scheduler
 sudo pacman -S --noconfirm --needed scx-scheds scx-tools
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/scx_loader/config.toml | sudo tee /etc/scx_loader/config.toml
 sudo systemctl enable --now scx_loader.service
 
-# configuring network (mostly for russia)
+# configuring network
 # https://wiki.archlinux.org/title/Sysctl#Improving_performance
 # https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 # https://man.archlinux.org/man/hosts.5.en
@@ -36,52 +36,54 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/98-arch.conf | sudo tee /etc/sysctl.d/98-arch.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/resolved.conf.d/resolved.conf | sudo tee /etc/systemd/resolved.conf.d/resolved.conf
 
-# using cachyos settings (took only settings related to ram, kernel and scheduler)
+# using some cachyos settings
 # https://github.com/CachyOS/CachyOS-Settings
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/70-cachyos-settings.conf | sudo tee /etc/sysctl.d/70-cachyos-settings.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/zram-generator.conf | sudo tee /etc/systemd/zram-generator.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules
 
-# configuring upower and logind for laptops (took default UPower config from gitlab and location of Upower config from archwiki, took default logind config from github)
+# configuring upower and logind for laptops
 # https://wiki.archlinux.org/title/Laptop#UPower
 # https://gitlab.freedesktop.org/upower/upower
 # https://wiki.archlinux.org/title/Power_management#ACPI_events
 # https://github.com/systemd/systemd
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/logind.conf | sudo tee /etc/systemd/logind.conf
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/logind.conf.d/logind.conf | sudo tee /etc/systemd/logind.conf.d/logind.conf
 
-# setting cpu governor to schedutil (took from archwiki, note: needed to configure bpfland to work with schedutil, cpupower itself is configured by reading the bash script "/usr/lib/systemd/scripts/cpupower")
+# setting cpu governor to schedutil
 # https://wiki.archlinux.org/title/CPU_frequency_scaling#cpupower
 sudo pacman -S --noconfirm --needed cpupower
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/default/cpupower | sudo tee /etc/default/cpupower
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/default/cpupower-service.conf | sudo tee /etc/default/cpupower-service.conf
 sudo systemctl enable --now cpupower
 
-# installing bpftune by oracle (useful for configuring sysctl on the fly without any manual intervention)
+# installing bpftune by oracle
 # https://github.com/CachyOS/CachyOS-PKGBUILDS
 git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
 makepkg -sirc --dir ./CachyOS-bpftune-git
 sudo systemctl enable --now bpftune
 
-# Optimisations - end
+# Optimizations - end
 
 
 # installing some base packages
-# resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive (I dont need fancy functions of kdenlive)
-# zed is my second code editor, torbrowser-launcher (FREE THE INTERNET), lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd (lvfs)
-# ventoy-bin is for a usb drive, amneziavpn-bin is for VPN, v2raya-bin is for proxy (xray-bin is a dep)
-# Bazaar is for flatpaks (why not)
-# onlyoffice > libreoffice (onlyoffice has a more pleasure interface to me)
+# resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive
+# zed is my second code editor, torbrowser-launcher for tor, lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd
+# ventoy-bin is for a usb drive, amneziavpn-bin is for VPN
+# Bazaar is for flatpaks
+# onlyoffice > libreoffice
 # Desktop Plus is for a github intergration
+# v2raya is for proxies
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
 # https://github.com/ilya-zlobintsev/LACT
 sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
-yay -S --noconfirm --needed ventoy-bin amneziavpn-bin v2raya-bin xray-bin
+yay -S --noconfirm --needed ventoy-bin amneziavpn-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
 flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
+sudo sh -c "$(curl -Ls https://github.com/v2rayA/v2rayA-installer/raw/main/installer.sh)" @ --with-xray
 sudo systemctl enable --now lactd
 sudo systemctl enable --now v2raya
 
@@ -103,5 +105,5 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/monitors.conf | tee ~/.config/hypr/monitors.conf
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/autostart.conf | tee ~/.config/hypr/autostart.conf
 
-# regenerating initramfs images (why not, lol)
+# regenerating initramfs images
 sudo mkinitcpio -P

@@ -1,16 +1,18 @@
 Super + Space | Application launcher
 Super + Alt + Space | Omarchy control menu
-Super + Escape | Lock/suspend/relaunch/restart/shutdown computer
+Super + Escape | System menu (suspend, restart, etc)
 Super + Ctrl + L | Lock computer
 Super + W | Close window
 Super + T | Toggle window between tiling/floating
+Super + O | Toggle popping window into sticky'n'floating
 Super + F | Go full screen
 Super + 1/2/3/4 | Jump to specific workspace
 Shift + Super + 1/2/3/4 | Move window to workspace
 
 Super + Return | Terminal
-Super + Shift + B | Browser
+Super + Shift + Return | Browser
 Super + Shift + F | File manager
+Super + Shift + Alt + F | File manager in cwd of terminal
 Super + Shift + N | Zed
 Super + Shift + G | Messenger (Telegram)
 
@@ -20,10 +22,10 @@ Super + V | Paste
 Super + Ctrl + V | Clipboard manager
 
 Print Screen | Screenshot with editing
-Shift + Print Screen | Screenshot straight to clipboard
 Alt + Print Screen | Screenrecord
+Shift + Print Screen | Screenshot straight to clipboard
 
-Ctrl + Super + Space | Next background image for theme
+Ctrl + Super + Space | Pick theme background
 Super + Backspace | Toggle transparency on a window
 
 Ctrl + Super + I | Toggle idle/sleep prevention

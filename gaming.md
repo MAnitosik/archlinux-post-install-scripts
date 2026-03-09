@@ -35,3 +35,10 @@ to use mangohud with gamescope you need to do it like this:
 ```
 gamescope --mangoapp -- %command%
 ```
+
+### hydra launcher sources
+[sources](https://library.hydra.wiki/)
+>Piracy, lets gooo
+
+### fixing issues
+[games crashes](https://wiki.archlinux.org/title/Gaming#Increase_vm.max_map_count)

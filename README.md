@@ -26,7 +26,7 @@ git clone --depth 1 https://github.com/MAnitosik/archlinux-post-install-scripts.
 
 cd ./archlinux-post-install-scripts/scripts/
 
-bash omarchy.sh / bash omarchy-alt.sh (omarchy will prompt you to reboot after installation, use omarchy-alt.sh in the case omarchy.sh does not work for you)
+bash omarchy.sh (omarchy will prompt you to reboot after installation, use omarchy-alt.sh in the case omarchy.sh does not work for you)
 
 cd ./archlinux-post-install-scripts/scripts/
 
@@ -86,41 +86,3 @@ sudo systemctl disable --now v2raya
 
 ### gaming
 - [gaming.md](https://github.com/MAnitosik/archlinux-post-install-scripts/blob/main/gaming.md)
-
-### deleted omarchy applications
-```
-lazygit
-lazydocker
-btop
-obsidian
-localsend
-libreoffice-fresh
-signal-desktop
-kdenlive
-1password-beta
-1password-cli
-typora
-spotify
-```
-
-### installed applications by these scripts
-```
-resources
-telegram-desktop
-video-trimmer
-ONLYOFFICE
-
-zed
-torbrowser-launcher
-lact
-gnome-boxes
-gnome-firmware
-amneziavpn-bin
-throne-bin (will be deprecated in the near future)
-ventoy-bin
-Bazaar
-
-wine-staging
-winetricks
-```
-> power-profiles-daemon was deleted in favor of cpupower (schedutil governor) to use it with sched-ext (scx_bpfland)
