@@ -1,6 +1,5 @@
 # preparations
 mkdir -p ~/.config/environment.d/
-sudo mkdir -p /etc/cmdline.d/
 sudo mkdir -p /etc/default/
 sudo mkdir -p /etc/sysctl.d/
 sudo mkdir -p /etc/scx_loader/
