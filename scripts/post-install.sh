@@ -11,7 +11,9 @@ sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 # https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
 # https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 # https://github.com/ilya-zlobintsev/LACT
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/cmdline.d/cmdline.conf | sudo tee /etc/cmdline.d/cmdline.conf
+CMDLINE=KERNEL_CMDLINE[default]+=" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd-pstate=passive rcutree.enable_rcu_lazy=1 amdgpu.ppfeaturemask=0xffffffff mitigations=off cfg80211.ieee80211_regdom=RU"
+echo '' >> /etc/default/limine
+echo $CMDLINE >> /etc/default/limine
 
 # configuring environment for wine and amd
 # https://wiki.cachyos.org
@@ -106,4 +108,4 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/autostart.conf | tee ~/.config/hypr/autostart.conf
 
 # regenerating initramfs images
-sudo mkinitcpio -P
+sudo limine-mkinitcpio
