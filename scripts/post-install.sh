@@ -11,9 +11,9 @@ sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 # https://wiki.archlinux.org/title/Unified_kernel_image#Kernel_command_line
 # https://wiki.archlinux.org/title/Improving_performance#Regulatory_domain
 # https://github.com/ilya-zlobintsev/LACT
-CMDLINE=KERNEL_CMDLINE[default]+=" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd-pstate=passive rcutree.enable_rcu_lazy=1 amdgpu.ppfeaturemask=0xffffffff mitigations=off cfg80211.ieee80211_regdom=RU"
-echo '' >> /etc/default/limine
-echo $CMDLINE >> /etc/default/limine
+CMDLINE="KERNEL_CMDLINE[default]+=\" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd-pstate=passive rcutree.enable_rcu_lazy=1 amdgpu.ppfeaturemask=0xffffffff mitigations=off cfg80211.ieee80211_regdom=RU\""
+echo '' | sudo tee -a /etc/default/limine
+echo $CMDLINE | sudo tee -a etc/default/limine
 
 # configuring environment for wine and amd
 # https://wiki.cachyos.org
