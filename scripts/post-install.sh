@@ -90,7 +90,8 @@ sudo sh -c "$(curl -Ls https://github.com/v2rayA/v2rayA-installer/raw/main/insta
 sudo systemctl enable --now lactd
 sudo systemctl enable --now v2raya
 
-# adding some basic support for windows apps with wine-staging (+deps) and winetricks (+deps)
+# adding some basic support for windows apps with bottles, wine-staging (+deps) and winetricks (+deps)
+flatpak install -y flathub com.usebottles.bottles
 sudo pacman -S --noconfirm --needed wine-staging
 sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono gnutls sdl2-compat gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg samba
 sudo pacman -S --noconfirm --needed winetricks
