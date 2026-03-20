@@ -31,6 +31,11 @@ add mangohud to game launch options in steam:
 mangohud %command%
 ```
 
+or you can add the env var:
+```
+MANGOHUD=1 %command%
+```
+
 to use mangohud with gamescope you need to do it like this:
 ```
 gamescope --mangoapp -- %command%
