@@ -38,6 +38,8 @@ cd ./archlinux-post-install-scripts/scripts/
 
 bash post-install.sh
 
+reboot (super + esc -> restart)
+
 bash laptop.sh (optional)
 
 bash gaming.sh (optional)
@@ -64,8 +66,6 @@ reboot (super + esc -> restart)
 
 ### configuration recommendations
 - Aether (pre-installed app to configure the look of your system)
-- delete all web apps (my personal choice, Omarchy Menu -> Remove -> Web App -> ctrl + a -> enter -> enter)
-- delete optional TUI (they will not work properly anyways, Omarchy Menu -> Remove -> TUI -> ctrl + a -> enter -> enter)
 - configure your monitor in ~/.config/hypr/monitors.conf
 - LACT (configure your GPU)
 - configure wine in winetricks for wider windows apps support
