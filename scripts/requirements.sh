@@ -10,7 +10,7 @@ sudo mkdir -p /etc/makepkg.conf.d/
 sudo mkdir -p /etc/UPower/
 
 # removing web apps and some TUI apps
-# deleting some base omarchy packages, installing flatpak and fully updating the system
+# deleting some base omarchy packages, installing fuse2 (for appimages), flatpak and fully updating the system
 # I dont need claude-code and opencode, lazygit and lazydocker are not needed, obsidian is just a smart note taking app, localsend is useless for me
 # 1password, typora and spotify are cringe
 # deleting PPD, since I will use cpupower
@@ -24,6 +24,7 @@ rm -f ~/.local/share/applications/typora.desktop
 sudo systemctl disable --now power-profiles-daemon
 sudo pacman -Rns power-profiles-daemon
 sudo pacman -Syuu
+sudo pacman -S --needed fuse2
 sudo pacman -S --needed flatpak
 
 # configuring makepkg

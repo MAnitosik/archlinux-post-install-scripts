@@ -75,7 +75,7 @@ sudo systemctl enable --now bpftune
 # ventoy-bin is for a usb drive, amneziavpn-bin is for VPN
 # Bazaar is for flatpaks
 # onlyoffice > libreoffice
-# Desktop Plus is for a github intergration
+# Desktop Plus is for a github intergration, gearlever is for managing appimages
 # v2raya is for proxies
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
@@ -85,7 +85,7 @@ sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gno
 yay -S --noconfirm --needed ventoy-bin amneziavpn-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
-flatpak install -y flathub io.github.pol_rivero.github-desktop-plus
+flatpak install -y flathub io.github.pol_rivero.github-desktop-plus it.mijorus.gearlever
 sudo sh -c "$(curl -Ls https://github.com/v2rayA/v2rayA-installer/raw/main/installer.sh)" @ --with-xray
 sudo systemctl enable --now lactd
 sudo systemctl enable --now v2raya
