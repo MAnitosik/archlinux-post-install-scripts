@@ -18,7 +18,7 @@ sudo mkdir -p /etc/UPower/
 # https://github.com/basecamp/omarchy
 omarchy-webapp-remove-all
 omarchy-tui-remove-all
-sudo pacman -Rns opencode claude-code lazygit lazydocker btop obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
+sudo pacman -Rns opencode claude-code lazygit lazydocker btop cliamp obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
 rm -f ~/.local/bin/codex ~/.local/bin/gemini ~/.local/bin/copilot ~/.local/bin/opencode ~/.local/bin/playwright-cli ~/.local/bin/pi
 rm -f ~/.local/share/applications/typora.desktop
 sudo systemctl disable --now power-profiles-daemon

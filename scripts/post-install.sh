@@ -13,7 +13,7 @@ sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 # https://github.com/ilya-zlobintsev/LACT
 sudo tee -a /etc/default/limine > /dev/null <<'EOF'
 
-KERNEL_CMDLINE[default]+=" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd-pstate=passive rcutree.enable_rcu_lazy=1 amdgpu.ppfeaturemask=0xffffffff mitigations=off cfg80211.ieee80211_regdom=RU"
+KERNEL_CMDLINE[default]+=" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd-pstate=passive rcutree.enable_rcu_lazy=1 cfg80211.ieee80211_regdom=RU mitigations=off amdgpu.ppfeaturemask=0xffffffff"
 EOF
 
 # configuring environment for wine and amd
@@ -70,7 +70,7 @@ sudo systemctl enable --now bpftune
 
 
 # installing some base packages
-# resources > btop, telegram-desktop > signal-desktop, video-trimmer > kdenlive
+# resources > btop, amberol > cliamp, telegram-desktop > signal-desktop, video-trimmer > kdenlive
 # zed is my second code editor, torbrowser-launcher for tor, lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd
 # ventoy-bin is for a usb drive, amneziavpn-bin is for VPN
 # Bazaar is for flatpaks
@@ -80,7 +80,7 @@ sudo systemctl enable --now bpftune
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
 # https://github.com/ilya-zlobintsev/LACT
-sudo pacman -S --noconfirm --needed resources telegram-desktop video-trimmer
+sudo pacman -S --noconfirm --needed resources amberol telegram-desktop video-trimmer
 sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
 yay -S --noconfirm --needed ventoy-bin amneziavpn-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
@@ -96,6 +96,7 @@ sudo pacman -S --noconfirm --needed wine-staging
 sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono gnutls sdl2-compat gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg samba
 sudo pacman -S --noconfirm --needed winetricks
 sudo pacman -S --noconfirm --needed --asdeps zenity
+winetricks gmdls dsound directmusic
 winetricks fontsmooth=rgb
 winetricks dxvk
 winetricks vkd3d
