@@ -26,6 +26,8 @@ git clone --depth 1 https://github.com/MAnitosik/archlinux-post-install-scripts.
 
 cd ./archlinux-post-install-scripts/scripts/
 
+bash zapret.sh (optional, alt9 is recommended)
+
 bash omarchy.sh (omarchy will prompt you to reboot after installation, use omarchy-alt.sh in the case omarchy.sh does not work for you)
 
 cd ./archlinux-post-install-scripts/scripts/
