@@ -70,18 +70,22 @@ sudo systemctl enable --now bpftune
 
 
 # installing some base packages
+# zed is my main code editor, brave-origin is my main browser
 # resources > btop, amberol > cliamp, telegram-desktop > signal-desktop, video-trimmer > kdenlive
-# zed is my second code editor, torbrowser-launcher for tor, lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd
+# torbrowser-launcher for tor, lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd
 # ventoy-bin is for a usb drive, amneziavpn-bin is for VPN
 # Bazaar is for flatpaks
 # onlyoffice > libreoffice
 # Desktop Plus is for a github intergration, gearlever is for managing appimages
 # v2raya is for proxies
+# making zed and brave-origin defaults for system
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
 # https://github.com/ilya-zlobintsev/LACT
+omarchy-install-zed
+omarchy-install-browser brave-origin
 sudo pacman -S --noconfirm --needed resources amberol telegram-desktop video-trimmer
-sudo pacman -S --noconfirm --needed zed torbrowser-launcher lact gnome-boxes gnome-firmware
+sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes gnome-firmware
 yay -S --noconfirm --needed ventoy-bin amneziavpn-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
@@ -89,6 +93,8 @@ flatpak install -y flathub io.github.pol_rivero.github-desktop-plus it.mijorus.g
 sudo sh -c "$(curl -Ls https://github.com/v2rayA/v2rayA-installer/raw/main/installer.sh)" @ --with-xray
 sudo systemctl enable --now lactd
 sudo systemctl enable --now v2raya
+omarchy-default-editor zed
+omarchy-default-browser brave-origin
 
 # adding some basic support for windows apps with bottles, wine-staging (+deps) and winetricks (+deps)
 flatpak install -y flathub com.usebottles.bottles
@@ -104,11 +110,11 @@ winetricks vkd3d
 # installing modified omarchy hyprland configs
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.conf | tee ~/.config/hypr/bindings.conf > /dev/null
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.lua | tee ~/.config/hypr/bindings.lua > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/hyprsunset.conf | tee ~/.config/hypr/hyprsunset.conf > /dev/null
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/input.conf | tee ~/.config/hypr/input.conf > /dev/null
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/monitors.conf | tee ~/.config/hypr/monitors.conf > /dev/null
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/autostart.conf | tee ~/.config/hypr/autostart.conf > /dev/null
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/input.lua | tee ~/.config/hypr/input.lua > /dev/null
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/monitors.lua | tee ~/.config/hypr/monitors.lua > /dev/null
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/autostart.lua | tee ~/.config/hypr/autostart.lua > /dev/null
 
 # regenerating initramfs images
 sudo limine-mkinitcpio
