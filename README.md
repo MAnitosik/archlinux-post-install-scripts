@@ -28,6 +28,8 @@ cd ./archlinux-post-install-scripts/scripts/
 
 bash zapret.sh (optional, alt9 is recommended)
 
+export OMARCHY_REF=dev
+
 bash omarchy.sh (omarchy will prompt you to reboot after installation, use omarchy-alt.sh in the case omarchy.sh does not work for you)
 
 cd ./archlinux-post-install-scripts/scripts/
@@ -52,6 +54,7 @@ reboot (super + esc -> restart)
 ### omarchy requirements (after scripts)
 - DHCP (Omarchy Menu -> Setup -> DNS -> DHCP, required for cloudflare DoT and DNSSEC)
 - **DO NOT** ENABLE HIBERNATE VIA OMARCHY MENU
+- **DO NOT** SWITCH UPDATE CHANNELS
 
 ### updating config files
 ```
@@ -75,7 +78,6 @@ reboot (super + esc -> restart)
 - download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
 - configure omarchy style (Omarchy Menu -> Style)
 - enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
-- switch to edge update channel if you want latest packages (Omarchy Menu -> Update -> Channel -> Edge)
 > I do not need to tell you that you need to update your system and these config files sometimes (via omarchy utils and my update script)
 
 ### v2raya
