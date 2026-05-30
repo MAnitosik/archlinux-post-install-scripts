@@ -4,31 +4,34 @@ Super + Escape | System menu (suspend, restart, etc)
 Super + Ctrl + L | Lock computer
 Super + W | Close window
 Super + T | Toggle window between tiling/floating
+Super + J | Toggle window position (horizontal/vertical)
 Super + O | Toggle popping window into sticky'n'floating
 Super + F | Go full screen
 Super + 1/2/3/4 | Jump to specific workspace
-Shift + Super + 1/2/3/4 | Move window to workspace
+Super + Shift + 1/2/3/4 | Move window to workspace
+Super + Left Mouse | Drag window around
+Super + Right Mouse | Resize window
+Super + Scroll Wheel | Scroll through workspaces
 
 Super + Return | Terminal
 Super + Shift + Return | Browser
 Super + Shift + F | File manager
-Super + Shift + Alt + F | File manager in cwd of terminal
-Super + Shift + N | Zed
-Super + Shift + G | Messenger (Telegram)
+Super + Shift + N | Editor
+Super + Shift + G | Telegram
 
 Super + C | Copy
 Super + X | Cut (not in terminal)
 Super + V | Paste
 Super + Ctrl + V | Clipboard manager
 
-Print Screen | Screenshot with editing
-Alt + Print Screen | Screenrecord
-Shift + Print Screen | Screenshot straight to clipboard
+Print Screen | Screenshot
+Super + Ctrl + Print Screen | Text extraction to clipboard (buggy with other languages)
 
 Ctrl + Super + Space | Pick theme background
 Super + Backspace | Toggle transparency on a window
 
 Ctrl + Super + I | Toggle idle/sleep prevention
 Ctrl + Super + N | Toggle nightlight display temperature
+Super + Shift + Backspace | Toggle window gaps
 
 Super + Ctrl + E | Emoji picker
