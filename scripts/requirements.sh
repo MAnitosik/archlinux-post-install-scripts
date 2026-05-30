@@ -16,9 +16,10 @@ sudo mkdir -p /etc/UPower/
 # deleting PPD, since I will use cpupower
 # https://learn.omacom.io/2/the-omarchy-manual
 # https://github.com/basecamp/omarchy
+# note: opencode is not a system package, so idk how to delete it properly
 omarchy-webapp-remove-all
 omarchy-tui-remove-all
-sudo pacman -Rns opencode claude-code lazygit lazydocker btop cliamp obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
+sudo pacman -Rns claude-code lazygit lazydocker btop cliamp obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
 rm -f ~/.local/bin/codex ~/.local/bin/gemini ~/.local/bin/copilot ~/.local/bin/opencode ~/.local/bin/playwright-cli ~/.local/bin/pi
 rm -f ~/.local/share/applications/typora.desktop
 sudo systemctl disable --now power-profiles-daemon
