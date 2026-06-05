@@ -33,6 +33,7 @@ sudo systemctl enable --now scx_loader.service
 # https://man.archlinux.org/man/hosts.5.en
 # https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 # https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
+# https://wiki.archlinux.org/title/Systemd-resolved#Fallback
 # https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
 sudo modprobe tcp_bbr
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts > /dev/null
