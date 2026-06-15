@@ -14,11 +14,9 @@
 - Xorg + GPU drivers (archinstall profile, required for correct gpu drivers)
 - multilib
 - swap partition (linux-swap, mostly required for laptops, choose the size of your ram)
-> MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
-
-### archinstall recommendations
-- ext4 (straight performance, widest support)
+- ext4 (straight performance, widest support) and Encrytpion: LUKS + Encryption password + Partitions
 - vanilla linux kernel (most of sane optimisations are done via config files, no need to use custom kernels)
+> MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN ARCHINSTALL PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
 
 ### sequence of scripts (after archinstall, in the installed OS)
 ```
