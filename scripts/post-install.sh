@@ -118,9 +118,9 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/autostart.lua | tee ~/.config/hypr/autostart.lua > /dev/null
 
 # installing additional kernels
-sudo pacman -S --noconfirm --needed linux-lts linux-zen linux-hardened
+sudo pacman -S --noconfirm --needed linux-lts
 sudo pacman -S --noconfirm --needed dkms
-sudo pacman -S --noconfirm --needed --asdeps linux-headers linux-lts-headers linux-hardened-headers
+sudo pacman -S --noconfirm --needed --asdeps linux-headers linux-lts-headers
 
 # regenerating initramfs images
 sudo limine-mkinitcpio
