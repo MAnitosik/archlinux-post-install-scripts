@@ -2,3 +2,4 @@
 - fix grammar everywhere in this repo
 - make configuration more versatile
 - use omarchy binaries for things like installing things
+- use cachyos settings as a package instead of maintaining files myself
