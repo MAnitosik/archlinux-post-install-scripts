@@ -25,8 +25,6 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/98-arch.conf | sudo tee /etc/sysctl.d/98-arch.conf > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/resolved.conf.d/resolved.conf | sudo tee /etc/systemd/resolved.conf.d/resolved.conf > /dev/null
 
-url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-ananicy-rules" | grep -oaE 'https://[^"[:space:]]+cachyos-ananicy-rules[^"[:space:]]+\.pkg\.tar\.[a-z0-9]+' | head -n1) && [ -n "$url" ] && curl -Lo "cachyos-ananicy-rules.pkg.tar.${url##*.pkg.tar.}" "$url"
-sudo pacman -U --asdeps ./cachyos-ananicy-rules.pkg.tar.zst
 url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-settings" | grep -ao 'https://[^"<> ]*cachyos-settings-[^"<> ]*\.pkg\.tar\.[a-zA-Z0-9]*' | head -n 1) && [ -n "$url" ] && curl -Lo "cachyos-settings.pkg.tar.${url##*.pkg.tar.}" "$url"
 sudo pacman -U ./cachyos-settings.pkg.tar.zst
 sudo systemctl disable --now ananicy-cpp

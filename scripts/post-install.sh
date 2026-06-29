@@ -43,8 +43,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 
 # using cachyos settings
 # https://github.com/CachyOS/CachyOS-Settings
-url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-ananicy-rules" | grep -oaE 'https://[^"[:space:]]+cachyos-ananicy-rules[^"[:space:]]+\.pkg\.tar\.[a-z0-9]+' | head -n1) && [ -n "$url" ] && curl -Lo "cachyos-ananicy-rules.pkg.tar.${url##*.pkg.tar.}" "$url"
-sudo pacman -U --asdeps ./cachyos-ananicy-rules.pkg.tar.zst
+yay -S --asdeps cachyos-ananicy-rules
 url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-settings" | grep -ao 'https://[^"<> ]*cachyos-settings-[^"<> ]*\.pkg\.tar\.[a-zA-Z0-9]*' | head -n 1) && [ -n "$url" ] && curl -Lo "cachyos-settings.pkg.tar.${url##*.pkg.tar.}" "$url"
 sudo pacman -U ./cachyos-settings.pkg.tar.zst
 sudo systemctl disable --now ananicy-cpp
