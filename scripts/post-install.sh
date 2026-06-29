@@ -13,7 +13,7 @@ sudo pacman -S --noconfirm --needed appmenu-gtk-module libdbusmenu-glib
 # https://github.com/ilya-zlobintsev/LACT
 sudo tee -a /etc/default/limine > /dev/null <<'EOF'
 
-KERNEL_CMDLINE[default]+=" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd-pstate=passive rcutree.enable_rcu_lazy=1 cfg80211.ieee80211_regdom=RU mitigations=off amdgpu.ppfeaturemask=0xffffffff"
+KERNEL_CMDLINE[default]+=" manitosik=1 zswap.enabled=0 nowatchdog quiet splash amd_pstate=passive rcutree.enable_rcu_lazy=1 intel_pstate=passive mitigations=off amdgpu.ppfeaturemask=0xffffffff"
 EOF
 
 # configuring environment for wine and amd
@@ -29,23 +29,25 @@ sudo systemctl enable --now scx_loader.service
 
 # configuring network
 # https://wiki.archlinux.org/title/Sysctl#Improving_performance
+# https://wiki.archlinux.org/title/Sysctl#TCP/IP_stack_hardening
 # https://github.com/Flowseal/zapret-discord-youtube/blob/main/.service/hosts
 # https://man.archlinux.org/man/hosts.5.en
 # https://github.com/ImMALWARE/dns.malw.link/blob/master/hosts
 # https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
 # https://wiki.archlinux.org/title/Systemd-resolved#Fallback
 # https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
-sudo modprobe tcp_bbr
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/modules-load.d/tcp-bbr.conf | sudo tee /etc/modules-load.d/tcp-bbr.conf > dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/98-arch.conf | sudo tee /etc/sysctl.d/98-arch.conf > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/resolved.conf.d/resolved.conf | sudo tee /etc/systemd/resolved.conf.d/resolved.conf > /dev/null
 
-# using some cachyos settings
+# using cachyos settings
 # https://github.com/CachyOS/CachyOS-Settings
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/70-cachyos-settings.conf | sudo tee /etc/sysctl.d/70-cachyos-settings.conf > /dev/null
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/zram-generator.conf | sudo tee /etc/systemd/zram-generator.conf > /dev/null
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/60-ioschedulers.rules | sudo tee /etc/udev/rules.d/60-ioschedulers.rules > /dev/null
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/udev/rules.d/30-zram.rules | sudo tee /etc/udev/rules.d/30-zram.rules > /dev/null
+url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-ananicy-rules" | grep -oaE 'https://[^"[:space:]]+cachyos-ananicy-rules[^"[:space:]]+\.pkg\.tar\.[a-z0-9]+' | head -n1) && [ -n "$url" ] && curl -Lo "cachyos-ananicy-rules.pkg.tar.${url##*.pkg.tar.}" "$url"
+sudo pacman -U --asdeps ./cachyos-ananicy-rules.pkg.tar.zst
+url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-settings" | grep -ao 'https://[^"<> ]*cachyos-settings-[^"<> ]*\.pkg\.tar\.[a-zA-Z0-9]*' | head -n 1) && [ -n "$url" ] && curl -Lo "cachyos-settings.pkg.tar.${url##*.pkg.tar.}" "$url"
+sudo pacman -U ./cachyos-settings.pkg.tar.zst
+sudo systemctl disable --now ananicy-cpp
 
 # configuring upower and logind for laptops
 # https://wiki.archlinux.org/title/Laptop#UPower
@@ -63,8 +65,8 @@ sudo systemctl enable --now cpupower
 
 # installing bpftune by oracle
 # https://github.com/CachyOS/CachyOS-PKGBUILDS
-git clone --depth 1 https://github.com/MAnitosik/CachyOS-bpftune-git.git
-makepkg -sirc --dir ./CachyOS-bpftune-git
+url=$(curl -sf --compressed "https://packages.cachyos.org/package/cachyos/x86_64/bpftune-git" | grep -aoE "https://[^\"'[:space:]<>]+bpftune-git[^\"'[:space:]<>]+\.pkg\.tar\.[a-z0-9]+" | head -n1) && [ -n "$url" ] && curl -fLo "bpftune-git.pkg${url##*.pkg}" "$url"
+sudo pacman -U ./bpftune-git.pkg.tar.zst
 sudo systemctl enable --now bpftune
 
 # Optimizations - end

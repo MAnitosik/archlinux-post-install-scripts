@@ -5,8 +5,8 @@ sudo mkdir -p /etc/sysctl.d/
 sudo mkdir -p /etc/scx_loader/
 sudo mkdir -p /etc/systemd/logind.conf.d/
 sudo mkdir -p /etc/systemd/resolved.conf.d/
-sudo mkdir -p /etc/udev/rules.d/
 sudo mkdir -p /etc/makepkg.conf.d/
+sudo mkdir -p /etc/modules-load.d/
 sudo mkdir -p /etc/UPower/
 
 # removing web apps and some TUI apps
