@@ -6,7 +6,9 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/config/user-tmpfiles.d/discord.conf | tee ~/.config/user-tmpfiles.d/discord.conf > /dev/null
 sudo pacman -S --noconfirm --needed lib32-mesa lib32-vulkan-radeon
 sudo pacman -S --noconfirm --needed steam gamescope mangohud lib32-mangohud goverlay
+sudo pacman -S --noconfirm --needed opencl-mesa ocl-icd
 yay -S --noconfirm --needed heroic-games-launcher-bin hydra-launcher-bin
+yay -S --noconfirm --needed jdk-temurin elyprismlauncher-bin
 flatpak install -y flathub net.davidotek.pupgui2 com.discordapp.Discord
 echo "Install custom versions of proton using protonup-qt, personally I recommend proton-cachyos (you need to open steam in the first place so protonup-qt can find your steam files location)"
 echo "TIP: DO NOT ENABLE SHADER PRE-CACHING ON MODERN COMPUTERS"

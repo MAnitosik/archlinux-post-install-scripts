@@ -26,7 +26,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/resolved.conf.d/resolved.conf | sudo tee /etc/systemd/resolved.conf.d/resolved.conf > /dev/null
 
 url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-settings" | grep -ao 'https://[^"<> ]*cachyos-settings-[^"<> ]*\.pkg\.tar\.[a-zA-Z0-9]*' | head -n 1) && [ -n "$url" ] && curl -Lo "cachyos-settings.pkg.tar.${url##*.pkg.tar.}" "$url"
-sudo pacman -U ./cachyos-settings.pkg.tar.zst
+sudo pacman -U --noconfirm --needed ./cachyos-settings.pkg.tar.zst
 sudo systemctl disable --now ananicy-cpp
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/UPower/UPower.conf | sudo tee /etc/UPower/UPower.conf > /dev/null
@@ -36,7 +36,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 sudo systemctl enable --now cpupower
 
 url=$(curl -sf --compressed "https://packages.cachyos.org/package/cachyos/x86_64/bpftune-git" | grep -aoE "https://[^\"'[:space:]<>]+bpftune-git[^\"'[:space:]<>]+\.pkg\.tar\.[a-z0-9]+" | head -n1) && [ -n "$url" ] && curl -fLo "bpftune-git.pkg${url##*.pkg}" "$url"
-sudo pacman -U ./bpftune-git.pkg.tar.zst
+sudo pacman -U --noconfirm --needed ./bpftune-git.pkg.tar.zst
 sudo systemctl enable --now bpftune
 
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/hypr/bindings.lua | tee ~/.config/hypr/bindings.lua > /dev/null
