@@ -74,7 +74,7 @@ sudo systemctl enable --now bpftune
 # installing some base packages
 # zed is my main code editor, brave-origin is my main browser
 # resources > btop, amberol > cliamp, telegram-desktop > signal-desktop, video-trimmer > kdenlive
-# torbrowser-launcher for tor, lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd
+# torbrowser-launcher for tor, lact is for configuring a gpu, gnome-boxes is for virtual machines, gnome-firmware is for fwupd, pycharm is for python
 # ventoy-bin is for a usb drive, amneziavpn-bin is for VPN
 # Bazaar is for flatpaks
 # onlyoffice > libreoffice
@@ -87,7 +87,7 @@ sudo systemctl enable --now bpftune
 omarchy-install-zed
 omarchy-install-browser brave-origin
 sudo pacman -S --noconfirm --needed resources amberol telegram-desktop video-trimmer
-sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes gnome-firmware
+sudo pacman -S --noconfirm --needed torbrowser-launcher lact gnome-boxes gnome-firmware pycharm-community-edition
 yay -S --noconfirm --needed ventoy-bin amneziavpn-bin
 flatpak install -y flathub io.github.kolunmi.Bazaar
 flatpak install -y flathub org.onlyoffice.desktopeditors
