@@ -36,7 +36,7 @@ sudo systemctl enable --now scx_loader.service
 # https://wiki.archlinux.org/title/Systemd-resolved#DNSSEC
 # https://wiki.archlinux.org/title/Systemd-resolved#Fallback
 # https://wiki.archlinux.org/title/Systemd-resolved#DNS_over_TLS
-curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/modules-load.d/tcp-bbr.conf | sudo tee /etc/modules-load.d/tcp-bbr.conf > dev/null
+curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/modules-load.d/tcp-bbr.conf | sudo tee /etc/modules-load.d/tcp-bbr.conf > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/hosts | sudo tee /etc/hosts > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/sysctl.d/98-arch.conf | sudo tee /etc/sysctl.d/98-arch.conf > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/systemd/resolved.conf.d/resolved.conf | sudo tee /etc/systemd/resolved.conf.d/resolved.conf > /dev/null
@@ -44,7 +44,7 @@ curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-sc
 # using cachyos settings
 # https://github.com/CachyOS/CachyOS-Settings
 yay -S --asdeps --noconfirm --needed cachyos-ananicy-rules
-url=$(curl -sL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-settings" | grep -ao 'https://[^"<> ]*cachyos-settings-[^"<> ]*\.pkg\.tar\.[a-zA-Z0-9]*' | head -n 1) && [ -n "$url" ] && curl -Lo "cachyos-settings.pkg.tar.${url##*.pkg.tar.}" "$url"
+url=$(curl -sfL --compressed "https://packages.cachyos.org/package/cachyos/any/cachyos-settings" | grep -aoE "https://[^\"'[:space:]<>]+cachyos-settings[^\"'[:space:]<>]+\.pkg\.tar\.[a-zA-Z0-9]+" | head -n 1) && [ -n "$url" ] && curl -sfLo "cachyos-settings.pkg${url##*.pkg}" "$url"
 sudo pacman -U --noconfirm --needed ./cachyos-settings.pkg.tar.zst
 sudo systemctl disable --now ananicy-cpp
 
@@ -64,7 +64,7 @@ sudo systemctl enable --now cpupower
 
 # installing bpftune by oracle
 # https://github.com/CachyOS/CachyOS-PKGBUILDS
-url=$(curl -sf --compressed "https://packages.cachyos.org/package/cachyos/x86_64/bpftune-git" | grep -aoE "https://[^\"'[:space:]<>]+bpftune-git[^\"'[:space:]<>]+\.pkg\.tar\.[a-z0-9]+" | head -n1) && [ -n "$url" ] && curl -fLo "bpftune-git.pkg${url##*.pkg}" "$url"
+url=$(curl -sfL --compressed "https://packages.cachyos.org/package/cachyos/x86_64/bpftune-git" | grep -aoE "https://[^\"'[:space:]<>]+bpftune-git[^\"'[:space:]<>]+\.pkg\.tar\.[a-zA-Z0-9]+" | head -n 1) && [ -n "$url" ] && curl -sfLo "bpftune-git.pkg${url##*.pkg}" "$url"
 sudo pacman -U --noconfirm --needed ./bpftune-git.pkg.tar.zst
 sudo systemctl enable --now bpftune
 
@@ -104,10 +104,10 @@ sudo pacman -S --noconfirm --needed wine-staging
 sudo pacman -S --noconfirm --needed --asdeps wine-gecko wine-mono gnutls sdl2-compat gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly ffmpeg samba
 sudo pacman -S --noconfirm --needed winetricks
 sudo pacman -S --noconfirm --needed --asdeps zenity
-winetricks gmdls dsound directmusic
-winetricks fontsmooth=rgb
-winetricks dxvk
-winetricks vkd3d
+winetricks -q gmdls dsound directmusic
+winetricks -q fontsmooth=rgb
+winetricks -q dxvk
+winetricks -q vkd3d
 
 # installing modified omarchy hyprland configs
 # https://learn.omacom.io/2/the-omarchy-manual

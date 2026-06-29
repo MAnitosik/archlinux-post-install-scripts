@@ -19,14 +19,13 @@ sudo mkdir -p /etc/UPower/
 # note: opencode is not a system package, so idk how to delete it properly
 omarchy-webapp-remove-all
 omarchy-tui-remove-all
-sudo pacman -Rns claude-code lazygit lazydocker btop cliamp obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
+sudo pacman -Rns --noconfirm claude-code lazygit lazydocker btop cliamp obsidian localsend libreoffice-fresh signal-desktop kdenlive 1password-beta 1password-cli typora spotify
 rm -f ~/.local/bin/codex ~/.local/bin/gemini ~/.local/bin/copilot ~/.local/bin/opencode ~/.local/bin/playwright-cli ~/.local/bin/pi
 rm -f ~/.local/share/applications/typora.desktop
 sudo systemctl disable --now power-profiles-daemon
-sudo pacman -Rns power-profiles-daemon
-sudo pacman -Syuu
-sudo pacman -S --needed fuse2
-sudo pacman -S --needed flatpak
+sudo pacman -Rns --noconfirm power-profiles-daemon
+sudo pacman -S --noconfirm --needed fuse2
+sudo pacman -S --noconfirm --needed flatpak
 
 # configuring makepkg
 # https://github.com/CachyOS/CachyOS-PKGBUILDS

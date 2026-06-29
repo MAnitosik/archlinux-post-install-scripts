@@ -1,8 +1,4 @@
 - 1 file script for everything in this repository
 - fix grammar everywhere in this repo
 - make configuration more versatile
-- use omarchy binaries for things like installing things
-- use cachyos settings as a package instead of maintaining files myself
 - give a choice to use thermald (requires a lot of work since the setup is mostly optimized for amd)
-- review AI code (parts which download external packages, e.g. bpftune and cachyos-settings)
-- rework gaming script (versatile)

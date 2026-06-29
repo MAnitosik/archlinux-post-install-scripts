@@ -5,13 +5,13 @@
 - **DO NOT** USE THESE SCRIPTS, THEY WERE MADE FOR MYSELF AND SHOULD NOT BE USED BY ANYONE ELSE, I AM NOT RESPONSIBLE IF YOU BREAK YOUR SYSTEM SOMEHOW
 - NOT FOR NEWBIES, USE FRIENDLY LINUX DISTRIBUTIONS (LINUX MINT, FEDORA KDE ETC...)
 - DOES NOT SUPPORT DUAL-BOOT (AND WILL NOT SUPPORT DUAL-BOOT)
-- PRIMARILY OPTIMISED FOR **AMD-POWERED SYSTEMS** (GPU AND CPU)
-- NETWORK IS PRIMALY OPTIMISED FOR **RUSSIA** (HOSTS FILE AND "cfg80211.ieee80211_regdom")
+- **NVIDIA** IS NOT SUPPORTED (FUCK NVIDIA)
+- HOSTS ARE OPTIMIZED FOR **RUSSIA**
 - MAKE SURE YOU CONFIGURE EVERYTHING YOU NEED IN **ARCHINSTALL** PROPERLY (BLUETOOTH, AUDIO ETC, IT IS NOT A GUIDE FOR ARCHINSTALL)
 
 ### archinstall requirements (while installation)
 - UKI + Limine
-- Xorg + GPU drivers (archinstall profile, required for correct gpu drivers)
+- Xorg + GPU drivers (archinstall profile, required for correct gpu drivers - choose all open-source drivers)
 - multilib
 - swap partition (linux-swap, mostly required for laptops, choose the size of your ram)
 - ext4 (straight performance, widest support) and Encrytpion: LUKS + Encryption password + Partitions
@@ -75,7 +75,6 @@ reboot (super + esc -> restart)
 - configure amneziavpn/v2raya so you can always have access to the internet
 - download updates for your firmware in gnome-firmware (your device may be not available in lvfs/fwupd, it is fine)
 - configure omarchy style (Omarchy Menu -> Style)
-- enable suspend in system menu (Omarchy Menu -> Setup -> System Sleep -> Enable Suspend`)
 > I do not need to tell you that you need to update your system and these config files sometimes (via omarchy utils and my update script)
 
 ### v2raya
