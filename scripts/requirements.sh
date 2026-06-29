@@ -31,3 +31,6 @@ sudo pacman -S --noconfirm --needed flatpak
 # https://github.com/CachyOS/CachyOS-PKGBUILDS
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/makepkg.conf | sudo tee /etc/makepkg.conf > /dev/null
 curl -fsSL https://raw.githubusercontent.com/MAnitosik/archlinux-post-install-scripts/refs/heads/main/etc/makepkg.conf.d/rust.conf | sudo tee /etc/makepkg.conf.d/rust.conf > /dev/null
+
+# making sure some packges are installed
+sudo pacman -S --noconfirm --needed upower
