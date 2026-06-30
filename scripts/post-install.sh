@@ -98,6 +98,10 @@ sudo systemctl enable --now v2raya
 omarchy-default-editor zed
 omarchy-default-browser brave-origin
 
+# installing additional packages for obs
+sudo pacman -S v4l2loopback-dkms obs-studio-plugin-browser gst-plugin-va
+yay -S obs-vkcapture lib32-obs-vkcapture obs-vaapi
+
 # adding some basic support for windows apps with bottles, wine-staging (+deps) and winetricks (+deps)
 flatpak install -y flathub com.usebottles.bottles
 sudo pacman -S --noconfirm --needed wine-staging
